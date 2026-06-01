@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="meta.title">Vestimy - Your wardrobe, digitalized.</title>
+    <meta name="description" data-i18n-attr="content:meta.desc"
+      content="Vestimy turns your physical wardrobe into a digital one. Scan what you own, compose outfits, and get instant looks built around any garment with Drippamy." />
+    <meta property="og:title" content="Vestimy - Your wardrobe, digitalized." />
+    <meta property="og:description" content="Know what you own, wear it better, and stay inspired - without buying more." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="progress"></div>
+    <canvas id="aurora"></canvas>
+    <div class="grain"></div>
+
+    <!-- ===================== NAV ===================== -->
+    <header class="nav">
+      <div class="wrap">
+        <nav class="nav__inner glass glass--high">
+          <a class="brand" href="index.html">
+            <img src="assets/icon.png" alt="Vestimy" />
+            Vestimy
+          </a>
+          <div class="nav__links">
+            <a href="#how" data-i18n="nav.how">How it works</a>
+            <a href="#ai" data-i18n="nav.ai">AI styling</a>
+            <a href="#drippamy" data-i18n="nav.drippamy">Drippamy</a>
+            <a href="brands.html" data-i18n="nav.brands">For brands</a>
+            <a href="support.html" data-i18n="nav.support">Support</a>
+          </div>
+          <div class="nav__cta">
+            <div class="lang" role="group" aria-label="Language">
+              <button data-lang-btn="en" aria-pressed="true">EN</button>
+              <button data-lang-btn="it" aria-pressed="false">IT</button>
+            </div>
+            <a href="#get" class="btn btn--primary" data-i18n="nav.getapp">Get the app</a>
+            <button class="nav__burger" aria-label="Menu">☰</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="wrap">
+        <span class="hero__pill glass glass--high">
+          <span class="dot"></span> <span data-i18n="hero.pill">Your closet, finally digital</span>
+        </span>
+        <h1 class="hero__title">
+          <span data-i18n="hero.titleA">Wear what you</span>
+          <span class="rotator" data-rotator>
+            <span data-i18n="rot.1">own</span>
+            <span data-i18n="rot.2">love</span>
+            <span data-i18n="rot.3">saved</span>
+          </span>
+        </h1>
+        <p class="hero__sub" data-i18n="hero.sub">
+          Vestimy turns your physical wardrobe into a digital one. Scan your
+          clothes once, then let the app decide what to wear, compose new
+          outfits, and discover looks - without buying more.
+        </p>
+        <div class="hero__actions">
+          <a href="#get" class="btn btn--primary btn--lg" data-magnetic data-i18n="hero.cta1">Download Vestimy</a>
+          <a href="#how" class="btn btn--ghost btn--lg" data-i18n="hero.cta2">See how it works</a>
+        </div>
+        <p class="hero__note" data-i18n-html="hero.note">Free to start · iOS &amp; Android · GDPR-first</p>
+
+        <!-- floating cut-out garments - the real "scontornato" wardrobe -->
+        <div class="hero__stage" aria-hidden="true">
+          <div class="garment g-jacket"><img src="assets/product.png" alt="" /></div>
+          <div class="garment g-tee"><img src="assets/tshirt.png" alt="" /></div>
+          <div class="garment g-tee2"><img src="assets/tshirt-2.png" alt="" /></div>
+          <div class="garment g-pants"><img src="assets/pants.png" alt="" /></div>
+          <div class="garment g-shoe"><img src="assets/shoe.png" alt="" /></div>
+
+          <div class="tag tag--1">
+            <span class="spark"><svg viewBox="0 0 24 24"><path d="M12 3l2.3 6.2L21 11l-6.7 1.8L12 19l-2.3-6.2L3 11l6.7-1.8L12 3Z"/></svg></span>
+            <span data-i18n="tag.recognized">Auto-recognized</span>
+          </div>
+          <div class="tag tag--2">
+            <span class="meta" data-i18n="tag.colors">Dominant colors</span>
+            <span class="swatch"><i style="background:#0e0b1f"></i><i style="background:#7a7f87"></i><i style="background:#c9b79c"></i></span>
+          </div>
+          <div class="tag tag--3">
+            <span class="spark"><svg viewBox="0 0 24 24"><path d="M12 3l2.3 6.2L21 11l-6.7 1.8L12 19l-2.3-6.2L3 11l6.7-1.8L12 3Z"/></svg></span>
+            <span data-i18n="tag.added">Added to closet</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MARQUEE TICKER ===================== -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <div class="ticker__group">
+          <span data-i18n="tick.1">Digitalize your wardrobe</span>
+          <span data-i18n="tick.2">Style with AI</span>
+          <span data-i18n="tick.3">Wear what you own</span>
+          <span data-i18n="tick.4">Drippamy any garment</span>
+        </div>
+        <div class="ticker__group">
+          <span data-i18n="tick.1">Digitalize your wardrobe</span>
+          <span data-i18n="tick.2">Style with AI</span>
+          <span data-i18n="tick.3">Wear what you own</span>
+          <span data-i18n="tick.4">Drippamy any garment</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== HOW IT WORKS (overview) ===================== -->
+    <section id="how" class="section-pad">
+      <div class="wrap">
+        <div class="head head--center reveal">
+          <p class="eyebrow" data-i18n="how.eyebrow">How it works</p>
+          <h2 data-i18n="how.title">From closet to outfit - in three steps.</h2>
+        </div>
+        <div class="hw">
+          <!-- 01 scan & recognize -->
+          <article class="hw-card glass reveal" data-tilt>
+            <div class="hw-card__head">
+              <span class="hw-card__num">01</span>
+              <h3 class="hw-card__title" data-i18n="how.s1.t">Catalogue</h3>
+            </div>
+            <div class="hw-viz hw-viz--scan">
+              <img src="assets/jacket.png" alt="" />
+              <span class="hw-chip">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="tag.recognized">Auto-recognized</span>
+              </span>
+              <span class="hw-sw"><i style="background:#b5824e"></i><i style="background:#2b2b2b"></i></span>
+            </div>
+          </article>
+          <!-- 02 compose / AI outfit -->
+          <article class="hw-card glass reveal" data-tilt>
+            <div class="hw-card__head">
+              <span class="hw-card__num">02</span>
+              <h3 class="hw-card__title" data-i18n="how.s2.t">Compose &amp; style</h3>
+            </div>
+            <div class="hw-viz hw-viz--row">
+              <div class="slot"><img src="assets/tshirt-2.png" alt="" /></div>
+              <div class="slot"><img src="assets/pants.png" alt="" /></div>
+              <div class="slot"><img src="assets/shoe.png" alt="" /></div>
+            </div>
+          </article>
+          <!-- 03 drippamy -->
+          <article class="hw-card glass reveal" data-tilt>
+            <div class="hw-card__head">
+              <span class="hw-card__num">03</span>
+              <h3 class="hw-card__title" data-i18n="how.s3.t">Drippamy &amp; discover</h3>
+            </div>
+            <div class="hw-viz hw-viz--cam">
+              <img src="assets/product.png" alt="" />
+              <span class="hw-spark"><svg viewBox="0 0 24 24"><path d="M12 3l2.3 6.2L21 11l-6.7 1.8L12 19l-2.3-6.2L3 11l6.7-1.8L12 3Z"/></svg></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CATALOGUE BAND ===================== -->
+    <section id="catalogue" class="section-pad">
+      <div class="wrap">
+        <div class="head head--center reveal">
+          <p class="eyebrow" data-i18n="cat.eyebrow">Your closet, catalogued</p>
+          <h2 data-i18n="cat.title">Every piece - recognized, tagged and color-matched automatically.</h2>
+          <p data-i18n="cat.lead">
+            Snap a garment and Vestimy cuts it out, identifies the category, and
+            pulls its dominant colors. No manual tagging.
+          </p>
+        </div>
+        <div class="catalogue">
+          <article class="cat-card glass reveal" data-tilt>
+            <div class="cat-card__img"><img src="assets/jacket.png" alt="" /></div>
+            <div class="cat-card__row">
+              <span class="cat-card__name" data-i18n="cat.j.n">Chore jacket</span>
+              <span class="cat-card__sw"><i style="background:#b5824e"></i><i style="background:#2b2b2b"></i></span>
+            </div>
+            <span class="cat-card__cat" data-i18n="cat.j.c">Outerwear</span>
+          </article>
+          <article class="cat-card glass reveal" data-tilt>
+            <div class="cat-card__img"><img src="assets/tshirt-2.png" alt="" /></div>
+            <div class="cat-card__row">
+              <span class="cat-card__name" data-i18n="cat.t.n">Cotton tee</span>
+              <span class="cat-card__sw"><i style="background:#8a8b5e"></i><i style="background:#d8d6c4"></i></span>
+            </div>
+            <span class="cat-card__cat" data-i18n="cat.t.c">Tops</span>
+          </article>
+          <article class="cat-card glass reveal" data-tilt>
+            <div class="cat-card__img"><img src="assets/pants.png" alt="" /></div>
+            <div class="cat-card__row">
+              <span class="cat-card__name" data-i18n="cat.p.n">Straight denim</span>
+              <span class="cat-card__sw"><i style="background:#222a3a"></i><i style="background:#3c4a63"></i></span>
+            </div>
+            <span class="cat-card__cat" data-i18n="cat.p.c">Bottoms</span>
+          </article>
+          <article class="cat-card glass reveal" data-tilt>
+            <div class="cat-card__img"><img src="assets/shoe.png" alt="" /></div>
+            <div class="cat-card__row">
+              <span class="cat-card__name" data-i18n="cat.s.n">Low sneakers</span>
+              <span class="cat-card__sw"><i style="background:#f2efe9"></i><i style="background:#d9d4c8"></i></span>
+            </div>
+            <span class="cat-card__cat" data-i18n="cat.s.c">Shoes</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== AI OUTFIT SUGGESTIONS ===================== -->
+    <section id="ai" class="section-pad">
+      <div class="wrap">
+        <div class="head head--center reveal">
+          <p class="eyebrow" data-i18n="ai.eyebrow">Outfit intelligence</p>
+          <h2 data-i18n="ai.title">Build looks by hand - or let Vestimy AI style you.</h2>
+          <p data-i18n="ai.lead">
+            Compose outfits yourself from your closet, or get ready-made looks
+            the AI builds from what you already own. Accept, tweak, or dismiss -
+            it learns what you wear.
+          </p>
+        </div>
+        <div class="modes">
+          <!-- manual -->
+          <article class="mode glass reveal" data-tilt>
+            <span class="mode__tag">
+              <svg viewBox="0 0 24 24"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg>
+              <span data-i18n="ai.manual.tag">Manual</span>
+            </span>
+            <h3 data-i18n="ai.manual.t">Compose it yourself</h3>
+            <p data-i18n="ai.manual.d">
+              Pick pieces from your wardrobe, mix and match, and save the
+              combinations you love.
+            </p>
+            <div class="outfit-row">
+              <div class="slot"><img src="assets/tshirt.png" alt="" /></div>
+              <div class="slot"><img src="assets/pants.png" alt="" /></div>
+              <div class="slot slot--add" data-i18n="ai.manual.cta">+ New outfit</div>
+            </div>
+          </article>
+          <!-- ai -->
+          <article class="mode mode--ai glass reveal" data-tilt>
+            <span class="mode__tag">
+              <svg viewBox="0 0 24 24"><path d="M12 3l2.3 6.2L21 11l-6.7 1.8L12 19l-2.3-6.2L3 11l6.7-1.8L12 3Z"/></svg>
+              <span data-i18n="ai.ai.tag">Vestimy AI</span>
+            </span>
+            <h3 data-i18n="ai.ai.t">Suggested for you</h3>
+            <p data-i18n="ai.ai.d">
+              The AI reads your closet and proposes complete outfits - one tap to
+              accept the look.
+            </p>
+            <div class="outfit-row">
+              <div class="slot"><img src="assets/tshirt-2.png" alt="" /></div>
+              <div class="slot"><img src="assets/pants.png" alt="" /></div>
+              <div class="slot"><img src="assets/shoe.png" alt="" /></div>
+            </div>
+            <div class="reasons">
+              <span data-i18n="ai.r1">Matches your colors</span>
+              <span data-i18n="ai.r2">Right for the season</span>
+              <span data-i18n="ai.r3">Built from your closet</span>
+            </div>
+            <button class="mode__btn mode__btn--ai" data-i18n="ai.ai.accept">Accept look</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DRIPPAMY SPOTLIGHT ===================== -->
+    <section id="drippamy" class="section-pad">
+      <div class="wrap">
+        <div class="spot glass glass--tint reveal">
+          <div class="spot__copy">
+            <p class="eyebrow" data-i18n="drip.eyebrow">Drippamy</p>
+            <p class="drip-kicker" data-i18n="drip.kicker">Your camera stylist</p>
+            <h2 data-i18n-html="drip.title">Point at a garment. <em>Get the whole fit.</em></h2>
+            <p data-i18n="drip.body">
+              Drippamy is Vestimy's camera stylist. Point it at any piece of
+              clothing - one of yours, something on a shop rail, or a photo from
+              your gallery - and it recognises the item, then instantly builds
+              full outfits around it.
+            </p>
+            <p class="drip-name" data-i18n="drip.name">
+              “Drip” is streetwear slang for a standout outfit. Drippamy = your
+              drip, on demand.
+            </p>
+            <ul class="spot__list">
+              <li><span class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span> <span data-i18n="drip.l1">Works with clothes you don't own yet</span></li>
+              <li><span class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span> <span data-i18n="drip.l2">Outfit ideas in a swipeable gallery</span></li>
+              <li><span class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span> <span data-i18n="drip.l3">One tap to retake and try another piece</span></li>
+            </ul>
+            <a href="#get" class="btn btn--primary" data-i18n="drip.cta">Try Drippamy</a>
+          </div>
+          <div class="drip-visual">
+            <div class="drip-anchor">
+              <div class="drip-anchor__img"><img src="assets/product.png" alt="" /></div>
+              <div class="drip-anchor__label">
+                <div class="meta" data-i18n="drip.scanned">Scanned</div>
+                <b data-i18n="drip.anchor">Leather jacket</b>
+              </div>
+            </div>
+            <div class="drip-arrow"><span data-i18n="drip.generated">Generated outfit</span></div>
+            <div class="drip-reel">
+              <div><img src="assets/tshirt.png" alt="" /></div>
+              <div><img src="assets/pants.png" alt="" /></div>
+              <div><img src="assets/shoe.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section id="get" class="section-pad">
+      <div class="wrap">
+        <div class="cta glass glass--high reveal">
+          <p class="eyebrow" data-i18n="cta.eyebrow">Get started</p>
+          <h2 data-i18n="cta.title">Your wardrobe is waiting.</h2>
+          <p data-i18n="cta.body">
+            Digitalize your closet, compose outfits, and stay inspired - all in
+            one beautifully simple app.
+          </p>
+          <div class="hero__actions">
+            <a href="#" class="btn btn--primary btn--lg" data-magnetic data-i18n="cta.ios">Download for iOS</a>
+            <a href="#" class="btn btn--ghost btn--lg" data-i18n="cta.android">Download for Android</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a class="brand" href="index.html">
+              <img src="assets/icon.png" alt="Vestimy" />
+              Vestimy
+            </a>
+            <p data-i18n="foot.tag">
+              Vestimy digitalizes your wardrobe, helps you compose outfits, and
+              inspires the next look - without buying more.
+            </p>
+          </div>
+          <div class="footer__col">
+            <h4 data-i18n="foot.product">Product</h4>
+            <a href="#how" data-i18n="foot.how">How it works</a>
+            <a href="#ai" data-i18n="nav.ai">AI styling</a>
+            <a href="#drippamy" data-i18n="foot.drippamy">Drippamy</a>
+            <a href="#get" data-i18n="foot.download">Download</a>
+          </div>
+          <div class="footer__col">
+            <h4 data-i18n="foot.company">Company</h4>
+            <a href="brands.html" data-i18n="foot.forbrands">For brands</a>
+            <a href="mailto:brands@vestimy.com" data-i18n="foot.partner">Partnerships</a>
+            <a href="support.html" data-i18n="foot.support">Support</a>
+            <a href="mailto:hello@vestimy.com" data-i18n="foot.contact">Contact</a>
+          </div>
+          <div class="footer__col">
+            <h4 data-i18n="foot.legal">Legal</h4>
+            <a href="privacy.html" data-i18n="foot.privacy">Privacy Policy</a>
+            <a href="mailto:privacy@vestimy.com" data-i18n="foot.datareq">Data requests</a>
+            <a href="support.html#account" data-i18n="foot.delete">Delete account</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span data-i18n="foot.rights">© 2026 Vestimy. All rights reserved.</span>
+          <span data-i18n="foot.made">Made in the EU · privacy@vestimy.com</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/motion.js"></script>
+    <script src="js/aurora.js"></script>
+  </body>
+</html>

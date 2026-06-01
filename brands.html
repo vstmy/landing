@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="bl.meta.title">Vestimy for Brands - Be the piece that completes the look.</title>
+    <meta name="description" data-i18n-attr="content:bl.meta.desc"
+      content="Contextual product placement inside real wardrobes. Your product suggested to complete AI outfits built from what shoppers already own. Privacy-first, no ad trackers." />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="progress"></div>
+    <canvas id="aurora"></canvas>
+    <div class="grain"></div>
+
+    <!-- ===================== NAV ===================== -->
+    <header class="nav">
+      <div class="wrap">
+        <nav class="nav__inner glass glass--high">
+          <a class="brand" href="brands.html">
+            <img src="assets/icon.png" alt="Vestimy" />
+            Vestimy<span style="font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:0.14em;color:var(--aurora);margin-left:8px;">FOR BRANDS</span>
+          </a>
+          <div class="nav__links">
+            <a href="#why" data-i18n="bl.nav.why">Why Vestimy</a>
+            <a href="#how" data-i18n="bl.nav.how">How it works</a>
+            <a href="#contextual" data-i18n="bl.nav.context">Contextual</a>
+            <a href="index.html" data-i18n="bl.nav.shoppers">For shoppers</a>
+          </div>
+          <div class="nav__cta">
+            <div class="lang" role="group" aria-label="Language">
+              <button data-lang-btn="en" aria-pressed="true">EN</button>
+              <button data-lang-btn="it" aria-pressed="false">IT</button>
+            </div>
+            <a href="mailto:brands@vestimy.com" class="btn btn--primary" data-i18n="bl.nav.cta">Book a demo</a>
+            <button class="nav__burger" aria-label="Menu">☰</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="bl-hero">
+      <div class="wrap">
+        <div class="bl-hero__grid">
+          <div class="bl-hero__copy reveal">
+            <p class="eyebrow" data-i18n="bl.hero.eyebrow">Vestimy for brands</p>
+            <h1 data-i18n-html="bl.hero.title">Be the piece that <em>completes the look.</em></h1>
+            <p class="bl-hero__sub" data-i18n="bl.hero.sub">
+              Not just targeted - contextual. Your product, suggested inside
+              outfits built from clothes shoppers already own.
+            </p>
+            <div class="hero__actions" style="justify-content:flex-start;">
+              <a href="mailto:brands@vestimy.com" class="btn btn--primary btn--lg" data-magnetic data-i18n="bl.hero.cta1">Book a demo</a>
+              <a href="#how" class="btn btn--ghost btn--lg" data-i18n="bl.nav.how">How it works</a>
+            </div>
+          </div>
+          <div class="ctx reveal" data-tilt>
+            <p class="ctx__owned-label" data-i18n="brand.ctxOwned">Already in the closet</p>
+            <div class="ctx__owned">
+              <div class="slot"><img src="assets/tshirt.png" alt="" /></div>
+              <div class="slot"><img src="assets/pants.png" alt="" /></div>
+              <div class="slot"><img src="assets/shoe.png" alt="" /></div>
+            </div>
+            <p class="ctx__brand-label">
+              <svg width="13" height="13" viewBox="0 0 24 24" style="fill:var(--aurora)"><path d="M12 3l2.3 6.2L21 11l-6.7 1.8L12 19l-2.3-6.2L3 11l6.7-1.8L12 3Z"/></svg>
+              <span data-i18n="brand.ctxFrom">From STUDIO LOOK</span>
+            </p>
+            <div class="ctx__hero">
+              <img src="assets/product.png" alt="" />
+              <div class="ctx__hero-info">
+                <b data-i18n="drip.anchor">Leather jacket</b>
+                <span class="ctx__chip">
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.3 6.2L21 11l-6.7 1.8L12 19l-2.3-6.2L3 11l6.7-1.8L12 3Z"/></svg>
+                  <span data-i18n="brand.ctxTag">Completes the look</span>
+                </span>
+              </div>
+            </div>
+            <p class="ctx__cap" data-i18n="brand.ctxCap">
+              Suggested because it pairs with 3 items already in this wardrobe.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TICKER ===================== -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <div class="ticker__group">
+          <span data-i18n="bl.tick.1">Contextual</span>
+          <span data-i18n="bl.tick.2">Not just targeted</span>
+          <span data-i18n="bl.tick.3">Inside the wardrobe</span>
+          <span data-i18n="bl.tick.4">Privacy-first</span>
+        </div>
+        <div class="ticker__group">
+          <span data-i18n="bl.tick.1">Contextual</span>
+          <span data-i18n="bl.tick.2">Not just targeted</span>
+          <span data-i18n="bl.tick.3">Inside the wardrobe</span>
+          <span data-i18n="bl.tick.4">Privacy-first</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== VALUE PROPS ===================== -->
+    <section id="why" class="section-pad">
+      <div class="wrap">
+        <div class="head head--center reveal">
+          <p class="eyebrow" data-i18n="bl.v.eyebrow">Why it works</p>
+          <h2 data-i18n="bl.v.title">Intent peaks where people get dressed.</h2>
+        </div>
+        <div class="features">
+          <article class="feature glass reveal" data-tilt>
+            <div class="feature__ic">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+            </div>
+            <h3 data-i18n="bl.v1.t">High intent</h3>
+            <p data-i18n="bl.v1.d">Shown while someone is actively styling an outfit - not mid-scroll.</p>
+          </article>
+          <article class="feature glass reveal" data-tilt>
+            <div class="feature__ic">
+              <svg viewBox="0 0 24 24"><path d="M12 3 21 8 12 13 3 8 12 3Z"/><path d="M3 13 12 18 21 13"/></svg>
+            </div>
+            <h3 data-i18n="bl.v2.t">Contextual</h3>
+            <p data-i18n="bl.v2.d">Matched to the real wardrobe and the gap in a specific look.</p>
+          </article>
+          <article class="feature glass reveal" data-tilt>
+            <div class="feature__ic">
+              <svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.4"/></svg>
+            </div>
+            <h3 data-i18n="bl.v3.t">Privacy-first</h3>
+            <p data-i18n="bl.v3.d">Aggregated signals only. No ad trackers, no IDFA / AAID.</p>
+          </article>
+          <article class="feature glass reveal" data-tilt>
+            <div class="feature__ic">
+              <svg viewBox="0 0 24 24"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+            </div>
+            <h3 data-i18n="bl.v4.t">Direct to buy</h3>
+            <p data-i18n="bl.v4.d">One tap from a suggested look to your store.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HOW PARTNERSHIP WORKS ===================== -->
+    <section id="how" class="section-pad">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="eyebrow" data-i18n="bl.how.eyebrow">How partnership works</p>
+          <h2 data-i18n="bl.how.title">From catalogue to completed look.</h2>
+        </div>
+        <div class="steps steps--4">
+          <article class="step glass reveal" data-tilt>
+            <div class="bl-num">01</div>
+            <h3 data-i18n="bl.h1.t">Connect your catalogue</h3>
+            <p data-i18n="bl.h1.d">Send a product feed - images, categories, colors, links.</p>
+          </article>
+          <article class="step glass reveal" data-tilt>
+            <div class="bl-num">02</div>
+            <h3 data-i18n="bl.h2.t">We match to wardrobes</h3>
+            <p data-i18n="bl.h2.d">Vestimy maps your pieces to real closets and outfit gaps.</p>
+          </article>
+          <article class="step glass reveal" data-tilt>
+            <div class="bl-num">03</div>
+            <h3 data-i18n="bl.h3.t">Appear in AI outfits</h3>
+            <p data-i18n="bl.h3.d">Your product is suggested to complete a look the user owns.</p>
+          </article>
+          <article class="step glass reveal" data-tilt>
+            <div class="bl-num">04</div>
+            <h3 data-i18n="bl.h4.t">Shoppers buy</h3>
+            <p data-i18n="bl.h4.d">A tap opens your store, in the moment of intent.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STATS STRIP ===================== -->
+    <section id="contextual" class="section-pad">
+      <div class="wrap">
+        <div class="brand-card glass glass--high reveal">
+          <p class="eyebrow" data-i18n="bl.ctx.eyebrow">Contextual placement</p>
+          <div class="brand-grid">
+            <div class="brand-copy">
+              <h2 data-i18n="bl.ctx.title">Your product, where it belongs.</h2>
+              <p data-i18n="bl.ctx.body">
+                Vestimy reads the closet, finds the missing piece, and places
+                yours - next to items the shopper already owns.
+              </p>
+              <div style="margin-top:26px;">
+                <a href="mailto:brands@vestimy.com" class="btn btn--primary" data-i18n="brand.cta">Partner with Vestimy</a>
+              </div>
+            </div>
+            <div class="brand-stats">
+              <div class="stat"><b>1×</b><span data-i18n="brand.s1">Scan once, styled forever</span></div>
+              <div class="stat"><b>3</b><span data-i18n="brand.s2">Surfaces: Closet, Drippamy, Explore</span></div>
+              <div class="stat"><b>EU</b><span data-i18n="brand.s3">GDPR-first data handling</span></div>
+              <div class="stat"><b>0</b><span data-i18n="brand.s4">Ad trackers - no IDFA / AAID</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="section-pad">
+      <div class="wrap">
+        <div class="cta glass glass--high reveal">
+          <p class="eyebrow" data-i18n="bl.hero.eyebrow">Vestimy for brands</p>
+          <h2 data-i18n="bl.cta.title">Put your catalogue inside the wardrobe.</h2>
+          <p data-i18n="bl.cta.body">Let's talk about contextual placement for your brand.</p>
+          <div class="hero__actions">
+            <a href="mailto:brands@vestimy.com" class="btn btn--primary btn--lg" data-magnetic data-i18n="bl.cta.btn">Book a demo</a>
+            <a href="index.html" class="btn btn--ghost btn--lg" data-i18n="bl.nav.shoppers">For shoppers</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__bottom" style="border:0; justify-content:center; gap:24px;">
+          <a href="index.html" style="font-weight:600;" data-i18n="bl.foot.shoppers">For shoppers</a>
+          <a href="support.html" style="font-weight:600;" data-i18n="nav.support">Support</a>
+          <a href="privacy.html" style="font-weight:600;" data-i18n="foot.privacy">Privacy Policy</a>
+          <span data-i18n="foot.rights">© 2026 Vestimy. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/motion.js"></script>
+    <script src="js/aurora.js"></script>
+  </body>
+</html>

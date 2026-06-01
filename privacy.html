@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - Vestimy</title>
+    <meta
+      name="description"
+      content="How Vestimy collects, uses, stores, and shares personal data. GDPR-first, EU-hosted, no advertising trackers."
+    />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <canvas id="aurora"></canvas>
+    <div class="grain"></div>
+
+    <header class="nav">
+      <div class="wrap">
+        <nav class="nav__inner glass glass--high">
+          <a class="brand" href="index.html">
+            <img src="assets/icon.png" alt="Vestimy" />
+            Vestimy
+          </a>
+          <div class="nav__links">
+            <a href="index.html#how" data-i18n="nav.how">How it works</a>
+            <a href="index.html#drippamy" data-i18n="nav.drippamy">Drippamy</a>
+            <a href="index.html#ai" data-i18n="nav.ai">AI styling</a>
+            <a href="brands.html" data-i18n="nav.brands">For brands</a>
+            <a href="support.html" data-i18n="nav.support">Support</a>
+          </div>
+          <div class="nav__cta">
+            <div class="lang" role="group" aria-label="Language">
+              <button data-lang-btn="en" aria-pressed="true">EN</button>
+              <button data-lang-btn="it" aria-pressed="false">IT</button>
+            </div>
+            <a href="index.html#get" class="btn btn--primary" data-i18n="nav.getapp">Get the app</a>
+            <button class="nav__burger" aria-label="Menu">☰</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="doc">
+      <div class="wrap">
+        <div class="doc__head reveal">
+          <p class="eyebrow" data-i18n="pri.eyebrow">Legal</p>
+          <h1 data-i18n="pri.title">Privacy Policy</h1>
+          <p data-i18n="pri.lead">
+            How we collect, use, store, and share your personal data -
+            GDPR-first and EU-hosted by default.
+          </p>
+        </div>
+
+        <article class="doc__body glass glass--high reveal">
+          <div class="doc__meta">
+            <span>Effective: 20 May 2026</span>
+            <span>Last updated: 20 May 2026</span>
+          </div>
+          <p data-i18n="pri.itNote" style="background: rgba(252,80,250,0.08); border-radius: 14px; padding: 12px 16px; font-size: 14px; margin: 0 0 26px;">
+            This policy is provided in English. An official Italian-language
+            version is available on request at privacy@vestimy.com.
+          </p>
+
+          <p>
+            This Privacy Policy describes how Vestimy ("<strong>Vestimy</strong>",
+            "<strong>we</strong>", "<strong>us</strong>", or
+            "<strong>our</strong>") collects, uses, stores, and shares personal
+            data when you use the Vestimy mobile application (the
+            "<strong>App</strong>") and the related backend services available at
+            <code>https://api.vestimy.com</code> (collectively, the
+            "<strong>Service</strong>").
+          </p>
+          <p>
+            We are committed to protecting your personal data and respecting your
+            rights under the EU General Data Protection Regulation 2016/679
+            ("<strong>GDPR</strong>"), the Italian Personal Data Protection Code
+            (D.Lgs. 196/2003 as amended), and other applicable privacy laws.
+          </p>
+
+          <h2 id="s1">1. Data Controller</h2>
+          <p>
+            The data controller responsible for the processing of your personal
+            data is <strong>Vestimy</strong> - operator of the Vestimy App.
+            Contact email: <strong>privacy@vestimy.com</strong>. If you have any
+            questions about this policy or wish to exercise your rights, please
+            contact us at the address above.
+          </p>
+
+          <h2 id="s2">2. Categories of personal data we process</h2>
+          <h3>2.1 Data you provide directly</h3>
+          <table class="doc__table">
+            <thead>
+              <tr><th>Data</th><th>When collected</th><th>Purpose</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Email address</td><td>Sign-up, login, password reset</td><td>Account creation and authentication</td></tr>
+              <tr><td>Password</td><td>Sign-up, login</td><td>Authentication (handled and stored only by Firebase Authentication; we never see your password in plaintext)</td></tr>
+              <tr><td>Display name</td><td>Sign-up</td><td>Personalisation of your profile</td></tr>
+              <tr><td>Gender preference</td><td>Onboarding and profile</td><td>Tailoring recommendations. A content preference, not a declaration of gender identity.</td></tr>
+              <tr><td>Username</td><td>Auto-suggested from email; editable</td><td>Identifying your profile within the Service</td></tr>
+              <tr><td>Photos of clothing items</td><td>When you add a garment</td><td>AI-based identification and persistent wardrobe storage</td></tr>
+              <tr><td>Garment metadata</td><td>When you finalize a garment</td><td>Building and organising your digital wardrobe</td></tr>
+              <tr><td>Outfit data</td><td>When you create an outfit</td><td>Wardrobe organisation, sharing outfits</td></tr>
+              <tr><td>Feedback messages</td><td>In-app feedback form</td><td>Improving the Service. Delivered to PostHog, not retained on the Vestimy backend.</td></tr>
+            </tbody>
+          </table>
+          <h3>2.2 Data we derive automatically</h3>
+          <ul>
+            <li>First/last name parsed from your Firebase display name or email local-part when not provided explicitly.</li>
+            <li>Username generated by sanitising the local part of your email. You can change it at any time.</li>
+            <li>Firebase user identifier (<code>uid</code>), used internally and as the distinct identifier in our analytics.</li>
+          </ul>
+          <h3>2.3 Data from third-party sign-in (Google)</h3>
+          <p>
+            If you sign in with Google, we receive an OAuth ID token containing
+            your Google account email and display name, which we exchange with
+            Firebase Authentication. We do <strong>not</strong> access your Google
+            Contacts, Drive, Calendar, photos, or any other Google product data.
+          </p>
+          <h3>2.4 Technical and usage data (analytics)</h3>
+          <p>
+            We automatically collect the events listed in Section 5, associated
+            with your Firebase user identifier so we can understand how users
+            interact with the App.
+          </p>
+          <h3>2.5 Data we do not collect</h3>
+          <p>
+            We do not collect: date of birth, age, phone number, postal address,
+            payment information, precise or coarse geolocation, contacts, calendar
+            entries, microphone audio, biometric identifiers, advertising
+            identifiers (IDFA/AAID), or device fingerprints.
+          </p>
+
+          <h2 id="s3">3. Device permissions</h2>
+          <table class="doc__table">
+            <thead><tr><th>Permission</th><th>Why we need it</th><th>When prompted</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Camera</strong></td><td>To photograph your clothing items</td><td>When you tap "Add item" → "Scan"</td></tr>
+              <tr><td><strong>Photo library</strong></td><td>To pick an existing photo of a clothing item</td><td>When you tap "Choose from library"</td></tr>
+            </tbody>
+          </table>
+          <p>
+            The App <strong>does not</strong> request permission for: notifications,
+            location, contacts, calendar, microphone, media library write access,
+            tracking transparency (ATT), Bluetooth, motion sensors, or background
+            fetch.
+          </p>
+
+          <h2 id="s4">4. Purposes and legal bases</h2>
+          <p>We rely on the following GDPR Article 6 legal bases:</p>
+          <table class="doc__table">
+            <thead><tr><th>Purpose</th><th>Legal basis</th></tr></thead>
+            <tbody>
+              <tr><td>Creating and authenticating your account</td><td>Contract - Art. 6(1)(b)</td></tr>
+              <tr><td>Building and maintaining your digital wardrobe</td><td>Contract - Art. 6(1)(b)</td></tr>
+              <tr><td>AI-based clothing identification</td><td>Contract - Art. 6(1)(b)</td></tr>
+              <tr><td>Outfit suggestions and personalised feed</td><td>Contract & legitimate interest - Art. 6(1)(b)/(f)</td></tr>
+              <tr><td>Product analytics (event tracking)</td><td>Legitimate interest - Art. 6(1)(f). You can object (Section 11).</td></tr>
+              <tr><td>Handling feedback you submit</td><td>Legitimate interest - Art. 6(1)(f)</td></tr>
+              <tr><td>Security, fraud prevention, abuse detection</td><td>Legitimate interest & legal obligation - Art. 6(1)(f)/(c)</td></tr>
+              <tr><td>Account deletion requests</td><td>Legal obligation - Art. 6(1)(c), Art. 17</td></tr>
+            </tbody>
+          </table>
+          <p>
+            We do <strong>not</strong> process any special categories of personal
+            data (Art. 9 GDPR), and we do not rely on consent except where
+            explicitly requested in-app (camera and photo library access).
+          </p>
+
+          <h2 id="s5">5. Analytics</h2>
+          <p>
+            We use <strong>PostHog</strong> as our product analytics processor,
+            configured by default to the European hosting region
+            (<code>https://eu.i.posthog.com</code>).
+          </p>
+          <h3>5.1 What is sent to PostHog</h3>
+          <p>
+            When you are signed in, the following are associated with your
+            Firebase user identifier: your email address, your authentication
+            provider (e.g. <code>password</code>, <code>google.com</code>), and
+            your username.
+          </p>
+          <h3>5.2 Events tracked</h3>
+          <p>
+            We record discrete events corresponding to actions you take -
+            including session lifecycle, the authentication funnel, onboarding,
+            the add-item flow, closet activity, outfit and product detail
+            actions, the Explore feed, account actions, and feedback. Automatic
+            touch and screen capture are <strong>disabled</strong>; we do not
+            record screen content, key presses, or input fields (other than
+            feedback you choose to submit).
+          </p>
+          <h3>5.3 Opting out of analytics</h3>
+          <p>
+            To object to analytics processing under Art. 21 GDPR, contact
+            <code>privacy@vestimy.com</code> and we will dissociate your data from
+            analytics records and refrain from further analytics processing for
+            your account.
+          </p>
+
+          <h2 id="s6">6. Third parties (processors and sub-processors)</h2>
+          <p>
+            Each provider below processes personal data on our behalf under a data
+            processing agreement compliant with Art. 28 GDPR.
+          </p>
+          <table class="doc__table">
+            <thead><tr><th>Provider</th><th>Role</th><th>Location</th></tr></thead>
+            <tbody>
+              <tr><td>Google Firebase (Authentication)</td><td>Authentication service</td><td>Google global infrastructure (may include the US)</td></tr>
+              <tr><td>Google Sign-In</td><td>Federated identity (only if you choose Google sign-in)</td><td>Google global infrastructure</td></tr>
+              <tr><td>PostHog</td><td>Product analytics</td><td>European Union (default)</td></tr>
+              <tr><td>Vestimy backend</td><td>Profile, closet, garments, outfits, feed</td><td>European Union</td></tr>
+            </tbody>
+          </table>
+          <p>
+            External merchant "Buy" links open in your device browser and are
+            governed by their own privacy policy; we do not pass personal data
+            through the outbound URL.
+          </p>
+          <h3>6.1 International data transfers</h3>
+          <p>
+            Where a processor transfers your data outside the EEA (in particular
+            Firebase / Google), the transfer is governed by the European
+            Commission's <strong>Standard Contractual Clauses</strong> (2021/914)
+            and supplementary measures where required. Contact
+            <code>privacy@vestimy.com</code> for a copy of the safeguards.
+          </p>
+
+          <h2 id="s7">7. Photos of clothing items</h2>
+          <p>When you scan or upload a photo of a clothing item:</p>
+          <ul>
+            <li>The image is sent to our backend as a JPEG with its dimensions.</li>
+            <li>An automated AI routine returns suggested categories, confidence scores, and dominant colors. <strong>No human reviews your images in the ordinary course of the Service.</strong></li>
+            <li>If you finalize the item, the image is stored persistently and re-served as image URLs tied to your wardrobe.</li>
+            <li>If you abandon the flow, the identification record may be retained but the garment won't appear in your closet.</li>
+          </ul>
+          <p>
+            You can delete any garment (and its photos and metadata) at any time;
+            deletion propagates to our backend.
+          </p>
+
+          <h2 id="s8">8. AI-generated outfit suggestions</h2>
+          <p>
+            We use server-side AI to identify clothing categories and colors, to
+            produce outfit suggestions from your closet, and to generate outfits
+            anchored on Explore items. These features perform
+            <strong>automated processing</strong> within the meaning of Art. 22
+            GDPR, but the outputs are non-binding recommendations with no legal or
+            similarly significant effect - you can ignore, dismiss, or accept any
+            suggestion. No on-device ML model is bundled; all AI runs on our
+            backend.
+          </p>
+
+          <h2 id="s9">9. Where and how long we store your data</h2>
+          <h3>9.1 On your device</h3>
+          <p>
+            Your Firebase auth token is held in secure storage (iOS Keychain /
+            Android EncryptedSharedPreferences); the Firebase session and a
+            24-hour cache of the category taxonomy in local storage; transient
+            flow state in memory. All of the above are wiped when you sign out or
+            delete your account.
+          </p>
+          <h3>9.2 On our servers and processors</h3>
+          <ul>
+            <li><strong>Firebase Authentication</strong> - retained while your account is active; deleted on account deletion.</li>
+            <li><strong>Vestimy backend</strong> - profile, closets, garments, photos, outfits - retained while active; deleted on account deletion.</li>
+            <li><strong>PostHog analytics</strong> - retained up to <strong>12 months</strong>, then pseudonymised or deleted.</li>
+            <li><strong>Backups and logs</strong> - retained up to <strong>30 days</strong> for disaster recovery, then overwritten.</li>
+          </ul>
+
+          <h2 id="s10">10. Sharing and social features</h2>
+          <p>
+            The App does not currently expose social-graph features (no followers,
+            friends, comments, likes, or DMs). Your closet is
+            <code>private</code> by default. You can share outfits through your
+            OS's native share sheet - the content is <strong>plain text only</strong>
+            (outfit and garment names); no images, links, or Vestimy URLs are
+            inserted.
+          </p>
+
+          <h2 id="s11">11. Your rights</h2>
+          <p>Under the GDPR you have the right to:</p>
+          <ul>
+            <li><strong>Access</strong> (Art. 15) - obtain a copy of your data.</li>
+            <li><strong>Rectification</strong> (Art. 16) - correct inaccurate data.</li>
+            <li><strong>Erasure</strong> (Art. 17) - a one-tap <strong>Delete account</strong> in Settings → Account.</li>
+            <li><strong>Restriction</strong> (Art. 18) and <strong>portability</strong> (Art. 20).</li>
+            <li><strong>Object</strong> (Art. 21) - including processing based on legitimate interest (analytics, recommendations).</li>
+            <li><strong>Not be subject to automated decisions</strong> with legal effect (Art. 22).</li>
+            <li><strong>Withdraw consent</strong> (Art. 7) and <strong>lodge a complaint</strong> with a supervisory authority, including the Italian <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">Garante</a>.</li>
+          </ul>
+          <p>
+            To exercise any right, contact <strong>privacy@vestimy.com</strong>.
+            We respond within <strong>one month</strong> (Art. 12 GDPR).
+          </p>
+
+          <h2 id="s12">12. Account deletion</h2>
+          <p>
+            Delete your account anytime from <strong>Account → Delete account</strong>.
+            This removes your profile, closets, garments, photos, and outfits from
+            our backend, signs you out of Firebase, deletes your credential, and
+            clears local storage. Deletion is <strong>immediate and irreversible</strong>;
+            backup snapshots are overwritten within 30 days. Analytics association
+            is removed on request to <code>privacy@vestimy.com</code>.
+          </p>
+
+          <h2 id="s13">13. Security</h2>
+          <ul>
+            <li>TLS (HTTPS) for all App–backend communication.</li>
+            <li>Auth tokens stored in the device secure enclave (Keychain / EncryptedSharedPreferences).</li>
+            <li>Server-side encryption at rest for photos and database records.</li>
+            <li>Access controls and audit logging on backend infrastructure.</li>
+            <li>Bearer-token authentication on every request, with automatic refresh.</li>
+          </ul>
+          <p>
+            No system is 100% secure. If a personal data breach affecting your
+            rights occurs, we will notify the competent supervisory authority
+            within <strong>72 hours</strong> and, where required, inform you
+            without undue delay (Art. 33–34 GDPR).
+          </p>
+
+          <h2 id="s14">14. Children</h2>
+          <p>
+            The Service is <strong>not intended for users under 16</strong> (or a
+            higher age where required locally). We do not knowingly collect data
+            from children below that age. If you believe a child has provided us
+            data, contact <code>privacy@vestimy.com</code> and we will delete it
+            and the associated account promptly.
+          </p>
+
+          <h2 id="s15">15. Cookies and similar technologies</h2>
+          <p>
+            The App is a native mobile application and does not use browser
+            cookies. It uses local on-device storage (Keychain, AsyncStorage) for
+            the strictly necessary purposes in Section 9.1. External merchant
+            websites opened from "Buy" links may use their own cookies.
+          </p>
+
+          <h2 id="s16">16. Changes to this policy</h2>
+          <p>
+            We may update this policy from time to time. For material changes we
+            update the "Last updated" date and notify you in-app or by email where
+            appropriate. Continued use after the effective date constitutes
+            acceptance of the revised policy.
+          </p>
+
+          <h2 id="s17">17. Contact</h2>
+          <p>
+            For any privacy-related question or request:
+            <strong>Vestimy</strong> - <strong>privacy@vestimy.com</strong>.
+          </p>
+          <p style="font-style: italic; color: var(--ink-faint); font-size: 14px; margin-top: 24px;">
+            This Privacy Policy is provided in English. Where required by
+            applicable law, an Italian-language version is available on request at
+            <code>privacy@vestimy.com</code>.
+          </p>
+        </article>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__bottom" style="border: 0; justify-content: center; gap: 24px;">
+          <a href="index.html" style="font-weight: 600;" data-i18n="sup.home">Home</a>
+          <a href="support.html" style="font-weight: 600;" data-i18n="nav.support">Support</a>
+          <span data-i18n="foot.rights">© 2026 Vestimy · privacy@vestimy.com</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/motion.js"></script>
+    <script src="js/aurora.js"></script>
+  </body>
+</html>
