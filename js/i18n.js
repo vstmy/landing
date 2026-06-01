@@ -286,6 +286,15 @@
       "sup.still": "Still stuck? Email",
       "sup.home": "Home",
 
+      /* 404 */
+      "nf.eyebrow": "Error 404",
+      "nf.title": "This look isn't in the closet.",
+      "nf.lead":
+        "We dug through every drawer and hanger - this page is nowhere to be found. Maybe it's in the laundry. Let's get you back to something that actually fits.",
+      "nf.quip": "Pro tip: even the best outfits get returned sometimes.",
+      "nf.home": "Back to home",
+      "nf.support": "Contact support",
+
       /* privacy chrome */
       "pri.eyebrow": "Legal",
       "pri.title": "Privacy Policy",
@@ -563,6 +572,15 @@
         "Parliamone. Scrivi a brands@vestimy.com e il nostro team ti contatterà per inserire il tuo catalogo nelle superfici Armadio, Drippamy ed Esplora.",
       "sup.still": "Ancora bloccato? Scrivi a",
       "sup.home": "Home",
+
+      /* 404 */
+      "nf.eyebrow": "Errore 404",
+      "nf.title": "Questo look non è nell'armadio.",
+      "nf.lead":
+        "Abbiamo frugato in ogni cassetto e gruccia - questa pagina non si trova da nessuna parte. Forse è in lavatrice. Ti riportiamo a qualcosa che ti calza davvero.",
+      "nf.quip": "Consiglio: anche i look migliori a volte vengono resi.",
+      "nf.home": "Torna alla home",
+      "nf.support": "Contatta il supporto",
 
       "pri.eyebrow": "Legale",
       "pri.title": "Privacy Policy",

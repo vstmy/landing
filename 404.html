@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page not found - Vestimy</title>
+    <meta name="description"
+      content="The page you're looking for doesn't exist. Head back to Vestimy." />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <canvas id="aurora"></canvas>
+    <div class="grain"></div>
+
+    <header class="nav">
+      <div class="wrap">
+        <nav class="nav__inner glass glass--high">
+          <a class="brand" href="/">
+            <img src="/assets/icon.png" alt="Vestimy" />
+            Vestimy
+          </a>
+          <div class="nav__links">
+            <a href="/#how" data-i18n="nav.how">How it works</a>
+            <a href="/#drippamy" data-i18n="nav.drippamy">Drippamy</a>
+            <a href="/#ai" data-i18n="nav.ai">AI styling</a>
+            <a href="/brands" data-i18n="nav.brands">For brands</a>
+            <a href="/support" data-i18n="nav.support">Support</a>
+          </div>
+          <div class="nav__cta">
+            <div class="lang" role="group" aria-label="Language">
+              <button data-lang-btn="en" aria-pressed="true">EN</button>
+              <button data-lang-btn="it" aria-pressed="false">IT</button>
+            </div>
+            <a href="/#get" class="btn btn--primary" data-i18n="nav.getapp">Get the app</a>
+            <button class="nav__burger" aria-label="Menu">☰</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="doc">
+      <div class="wrap">
+        <div class="doc__head reveal nf" style="text-align: center; padding: 64px 0;">
+          <div class="nf__art" aria-hidden="true">
+            <span class="nf__digit">4</span>
+            <img class="nf__hanger" src="/assets/tshirt.png" alt="" />
+            <span class="nf__digit">4</span>
+          </div>
+          <h1 data-i18n="nf.title" style="margin-top: 10px;">This look isn't in the closet.</h1>
+          <p data-i18n="nf.lead">
+            We dug through every drawer and hanger - this page is nowhere to be
+            found. Maybe it's in the laundry. Let's get you back to something
+            that actually fits.
+          </p>
+          <p class="nf__quip" data-i18n="nf.quip">
+            Pro tip: even the best outfits get returned sometimes.
+          </p>
+          <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
+            <a href="/" class="btn btn--primary" data-i18n="nf.home">Back to home</a>
+            <a href="/support" class="btn" data-i18n="nf.support">Contact support</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <style>
+      .nf__art {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(4px, 2vw, 18px);
+        margin-bottom: 8px;
+      }
+      .nf__digit {
+        font-family: var(--font-serif);
+        font-size: clamp(90px, 22vw, 200px);
+        line-height: 1;
+        color: var(--violet);
+      }
+      .nf__hanger {
+        width: clamp(70px, 16vw, 150px);
+        height: auto;
+        transform-origin: 50% 0;
+        animation: nf-swing 3.2s ease-in-out infinite;
+        filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.25));
+      }
+      .nf__quip {
+        margin-top: 14px;
+        color: var(--ink-soft);
+        font-style: italic;
+      }
+      @keyframes nf-swing {
+        0%, 100% { transform: rotate(-7deg); }
+        50% { transform: rotate(7deg); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .nf__hanger { animation: none; }
+      }
+    </style>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__bottom" style="border: 0; justify-content: center; gap: 24px;">
+          <a href="/" style="font-weight: 600;" data-i18n="sup.home">Home</a>
+          <a href="/privacy" style="font-weight: 600;" data-i18n="foot.privacy">Privacy Policy</a>
+          <span data-i18n="foot.rights">© 2026 Vestimy · privacy@vestimy.com</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/i18n.js"></script>
+    <script src="/js/motion.js"></script>
+    <script src="/js/aurora.js"></script>
+  </body>
+</html>
