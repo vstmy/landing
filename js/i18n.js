@@ -22,9 +22,9 @@
       "nav.support": "Support",
       "nav.privacy": "Privacy",
       "nav.forbrands": "For brands",
-      "nav.getapp": "Get the app",
+      "nav.getapp": "Join the beta",
 
-      "hero.pill": "Your closet, finally digital",
+      "hero.pill": "Now in beta on iOS",
       "hero.title": "Wear everything <em>you already own.</em>",
       "hero.titleA": "Wear what you",
       "rot.1": "own",
@@ -32,9 +32,9 @@
       "rot.3": "saved",
       "hero.sub":
         "Scan your closet once. Compose outfits or get AI looks - from what you already own.",
-      "hero.cta1": "Download Vestimy",
+      "hero.cta1": "Join the beta",
       "hero.cta2": "See how it works",
-      "hero.note": "Free to start · iOS &amp; Android · GDPR-first",
+      "hero.note": "Free beta · iOS 17+ · GDPR-first",
 
       "feat.eyebrow": "What Vestimy does",
       "feat.title": "One place to know what you own - and wear it better.",
@@ -170,11 +170,30 @@
       "bl.foot.shoppers": "For shoppers",
 
       "cta.eyebrow": "Get started",
-      "cta.title": "Your wardrobe is waiting.",
+      "cta.title": "The beta is open.",
       "cta.body":
-        "Digitalize your closet, compose outfits, and stay inspired - all in one beautifully simple app.",
-      "cta.ios": "Download for iOS",
-      "cta.android": "Download for Android",
+        "We're letting in early testers now. Pick your platform - the iOS beta is open, and Android is on the way.",
+      "cta.ios": "iOS — Join the beta",
+      "cta.android": "Android? Get notified",
+
+      /* ===== ANDROID WAITLIST (android.html) ===== */
+      "wl.meta.title": "Android waitlist - Vestimy",
+      "wl.meta.desc":
+        "Vestimy is in closed beta on iOS first. Join the Android waitlist and we'll email you the moment the Android beta opens.",
+      "wl.eyebrow": "Android",
+      "wl.title": "Android is on the way.",
+      "wl.lead":
+        "Vestimy is in closed beta on iOS first. Leave your email and we'll let you know the moment the Android beta opens - no spam, ever.",
+      "wl.email.label": "Email",
+      "wl.email.ph": "you@example.com",
+      "wl.consent":
+        "I agree to be contacted once about the Vestimy Android beta. GDPR-first - your email is used only for this.",
+      "wl.submit": "Notify me",
+      "wl.success.t": "You're on the list.",
+      "wl.success.d": "We'll email you the moment Vestimy lands on Android.",
+      "wl.alt": "On iOS instead?",
+      "wl.alt.link": "Join the beta now →",
+      "wl.home": "Home",
 
       "foot.tag":
         "Vestimy digitalizes your wardrobe, helps you compose outfits, and inspires the next look - without buying more.",
@@ -317,9 +336,9 @@
       "nav.support": "Supporto",
       "nav.privacy": "Privacy",
       "nav.forbrands": "Per i brand",
-      "nav.getapp": "Scarica l'app",
+      "nav.getapp": "Prova la beta",
 
-      "hero.pill": "Il tuo armadio, finalmente digitale",
+      "hero.pill": "Ora in beta su iOS",
       "hero.title": "Indossa tutto <em>quello che hai già.</em>",
       "hero.titleA": "Indossa ciò che",
       "rot.1": "possiedi",
@@ -327,9 +346,9 @@
       "rot.3": "hai salvato",
       "hero.sub":
         "Scansiona l'armadio una volta. Componi outfit o ricevi look AI - da ciò che hai già.",
-      "hero.cta1": "Scarica Vestimy",
+      "hero.cta1": "Prova la beta",
       "hero.cta2": "Scopri come funziona",
-      "hero.note": "Gratis · iOS e Android · GDPR-first",
+      "hero.note": "Beta gratuita · iOS 17+ · GDPR-first",
 
       "feat.eyebrow": "Cosa fa Vestimy",
       "feat.title": "Un solo posto per sapere cosa possiedi - e indossarlo meglio.",
@@ -463,11 +482,30 @@
       "bl.foot.shoppers": "Per gli utenti",
 
       "cta.eyebrow": "Inizia ora",
-      "cta.title": "Il tuo guardaroba ti aspetta.",
+      "cta.title": "La beta è aperta.",
       "cta.body":
-        "Digitalizza l'armadio, componi outfit e resta ispirato - tutto in un'unica app, semplice e curata.",
-      "cta.ios": "Scarica per iOS",
-      "cta.android": "Scarica per Android",
+        "Stiamo facendo entrare i primi tester. Scegli la piattaforma: la beta iOS è già aperta, Android sta arrivando.",
+      "cta.ios": "iOS — Prova la beta",
+      "cta.android": "Android? Avvisami",
+
+      /* ===== ANDROID WAITLIST (android.html) ===== */
+      "wl.meta.title": "Lista d'attesa Android - Vestimy",
+      "wl.meta.desc":
+        "Vestimy è in beta chiusa prima su iOS. Iscriviti alla lista d'attesa Android e ti scriviamo appena si apre la beta Android.",
+      "wl.eyebrow": "Android",
+      "wl.title": "Android sta arrivando.",
+      "wl.lead":
+        "Vestimy è in beta chiusa prima su iOS. Lascia la tua email e ti avvisiamo appena si apre la beta Android - niente spam, mai.",
+      "wl.email.label": "Email",
+      "wl.email.ph": "tu@esempio.com",
+      "wl.consent":
+        "Acconsento a essere contattato una volta sulla beta Android di Vestimy. GDPR-first - la tua email è usata solo per questo.",
+      "wl.submit": "Avvisami",
+      "wl.success.t": "Sei in lista.",
+      "wl.success.d": "Ti scriviamo appena Vestimy arriva su Android.",
+      "wl.alt": "Sei su iOS?",
+      "wl.alt.link": "Prova subito la beta →",
+      "wl.home": "Home",
 
       "foot.tag":
         "Vestimy digitalizza il tuo guardaroba, ti aiuta a comporre outfit e ti ispira il prossimo look - senza comprare altro.",
