@@ -172,8 +172,8 @@
       "cta.eyebrow": "Get started",
       "cta.title": "The beta is open.",
       "cta.body":
-        "We're letting in early testers now. Join the beta on TestFlight and help shape Vestimy before launch.",
-      "cta.ios": "Join the beta on TestFlight",
+        "We're letting in early testers now. Pick your platform - the iOS beta is open, and Android is on the way.",
+      "cta.ios": "iOS — Join the beta",
       "cta.android": "Android? Get notified",
 
       /* ===== ANDROID WAITLIST (android.html) ===== */
@@ -484,8 +484,8 @@
       "cta.eyebrow": "Inizia ora",
       "cta.title": "La beta è aperta.",
       "cta.body":
-        "Stiamo facendo entrare i primi tester. Prova la beta su TestFlight e aiutaci a dare forma a Vestimy prima del lancio.",
-      "cta.ios": "Prova la beta su TestFlight",
+        "Stiamo facendo entrare i primi tester. Scegli la piattaforma: la beta iOS è già aperta, Android sta arrivando.",
+      "cta.ios": "iOS — Prova la beta",
       "cta.android": "Android? Avvisami",
 
       /* ===== ANDROID WAITLIST (android.html) ===== */
