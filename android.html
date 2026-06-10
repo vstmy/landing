@@ -54,16 +54,15 @@
 
         <div class="waitlist glass glass--high reveal" id="waitlist">
           <!--
-            GOOGLE FORM WIRING - replace the two placeholders below:
-            1. <form action="..."> with your form's formResponse URL:
-               https://docs.google.com/forms/d/e/FORM_ID/formResponse
-            2. The email input's name="entry.XXXXXXXX" with your email field's entry id.
-            (See chat instructions for how to find both.)
+            GOOGLE FORM WIRING
+            action URL is set. Remaining: replace the email input's
+            name="entry.0000000000" with the real entry id of the email field
+            (find it via the form's "Get pre-filled link").
           -->
           <form
             class="wl-form"
             id="wlForm"
-            action="GOOGLE_FORM_ACTION_URL"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSdSpv8gHb_5MAbcv97s-vd90IPqk8wSZcPAkRQQMHQ3ysrGPg/formResponse"
             method="POST"
             target="wl_sink"
             novalidate
