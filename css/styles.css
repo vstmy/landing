@@ -2081,3 +2081,207 @@ h1.hero__title em::before {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+
+/* ---------- Beta application form ---------- */
+.beta-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 40px);
+}
+.beta-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.beta-field {
+  margin-bottom: 22px;
+}
+.beta-label {
+  display: block;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+.beta-opt {
+  font-weight: 500;
+  color: var(--ink-faint);
+}
+.beta-hint {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin: 8px 0 0;
+}
+.beta-error {
+  display: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--coral);
+  margin: 8px 0 0;
+}
+.beta-field.has-error .beta-error {
+  display: block;
+}
+.beta-field.has-error .wl-input,
+.beta-field.has-error .beta-select {
+  border-color: var(--coral);
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.18);
+}
+.beta-field.has-error .beta-pill {
+  border-color: rgba(255, 107, 107, 0.55);
+}
+
+/* select */
+.beta-select {
+  width: 100%;
+  font: inherit;
+  font-size: 16px;
+  color: var(--ink);
+  padding: 15px 44px 15px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-edge);
+  background-color: var(--glass-high);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%230e0b1f' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.beta-select:focus {
+  outline: none;
+  border-color: var(--violet);
+  box-shadow: 0 0 0 3px rgba(109, 74, 224, 0.18);
+}
+
+/* segmented pill groups */
+.beta-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.beta-pill {
+  flex: 1 1 auto;
+  text-align: center;
+  font: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink);
+  padding: 13px 16px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--glass-edge);
+  background: var(--glass-high);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  transition: transform 0.15s ease, background 0.18s ease, color 0.18s ease,
+    box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.beta-pill:hover {
+  transform: translateY(-1px);
+}
+.beta-pill.is-active {
+  background: var(--ink);
+  color: var(--cream);
+  border-color: transparent;
+  box-shadow: 0 10px 22px rgba(14, 11, 31, 0.26);
+}
+.beta-pills--grid .beta-pill {
+  flex: 1 1 calc(50% - 5px);
+}
+
+/* waitlist note (Android) */
+.beta-note {
+  margin: 0;
+  padding: 16px 18px;
+  border-radius: var(--radius-lg);
+  background: rgba(237, 200, 252, 0.55);
+  border: 1px solid var(--glass-edge);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+/* smooth conditional collapse */
+.beta-collapse {
+  overflow: hidden;
+  max-height: 1500px;
+  opacity: 1;
+  transition: max-height 0.5s ease, opacity 0.4s ease, margin 0.5s ease;
+}
+.beta-collapse.is-collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+#androidNote {
+  margin-bottom: 22px;
+}
+#androidNote.is-collapsed {
+  margin-bottom: 0;
+}
+
+/* honeypot */
+.beta-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+/* submit */
+.beta-form .btn {
+  justify-content: center;
+  width: 100%;
+  margin-top: 6px;
+}
+.beta-form .btn[disabled] {
+  opacity: 0.6;
+  cursor: default;
+  transform: none;
+}
+
+/* network error */
+.beta-formerror {
+  display: none;
+  margin: 0 0 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--coral);
+  text-align: center;
+}
+.beta-formerror.is-shown {
+  display: block;
+}
+
+/* success */
+.beta-success {
+  display: none;
+  text-align: center;
+}
+.beta-card.is-done .beta-form {
+  display: none;
+}
+.beta-card.is-done .beta-success {
+  display: block;
+}
+.beta-success__t {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(26px, 4vw, 38px);
+  margin: 0 0 10px;
+}
+.beta-success__d {
+  color: var(--ink-soft);
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .beta-collapse {
+    transition: none;
+  }
+}
