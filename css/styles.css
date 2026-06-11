@@ -2285,3 +2285,15 @@ h1.hero__title em::before {
     transition: none;
   }
 }
+
+/* /beta - keep the language switcher reachable on mobile (mobile-first funnel).
+   Higher specificity than the global `.lang { display:none }` mobile rule. */
+.page-beta .lang {
+  display: inline-flex;
+}
+@media (max-width: 540px) {
+  /* free up nav room on phones - the brand logo already links home */
+  .page-beta .nav__cta .btn--ghost {
+    display: none;
+  }
+}
