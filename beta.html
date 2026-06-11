@@ -79,8 +79,8 @@
               <p class="beta-error" data-error="phone">Scegli un'opzione.</p>
             </div>
 
-            <!-- conditional iPhone-only block (3, 4, 5) -->
-            <div class="beta-collapse" id="iosFields">
+            <!-- conditional iPhone-only block (3, 4, 5) - nascosto finché non si sceglie iPhone -->
+            <div class="beta-collapse is-collapsed" id="iosFields">
               <!-- 3. Modello iPhone -->
               <div class="beta-field" data-field="model">
                 <label class="beta-label" for="betaModel">Che modello di iPhone hai?</label>
@@ -281,7 +281,7 @@
             firstBad = firstBad || form.querySelector('[data-pills="phone"]');
           }
 
-          if (mode === "ios") {
+          if (picks.phone === "iPhone") {
             var modelSel = document.getElementById("betaModel");
             if (!modelSel.value) {
               setError("model");
@@ -330,7 +330,7 @@
           params.append(ENTRY.telegram, normalizeTelegram(document.getElementById("betaTelegram").value));
           params.append(ENTRY.phone, picks.phone);
           params.append(ENTRY.source, picks.source);
-          if (mode === "ios") {
+          if (picks.phone === "iPhone") {
             params.append(ENTRY.model, document.getElementById("betaModel").value);
             params.append(ENTRY.items, picks.items);
             params.append(ENTRY.feedback, picks.feedback);
