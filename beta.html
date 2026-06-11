@@ -51,6 +51,52 @@
 
         <div class="beta-card glass glass--high reveal" id="betaCard">
           <form class="beta-form" id="betaForm" novalidate>
+            <!-- Quante foto fai ai tuoi outfit? -->
+            <div class="beta-field" data-field="photos">
+              <span class="beta-label" id="photosLabel">Quante foto fai ai tuoi outfit?</span>
+              <div class="beta-pills" role="radiogroup" aria-labelledby="photosLabel" data-pills="photos">
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Mai">Mai</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Ogni tanto">Ogni tanto</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Spesso, è il mio genere di contenuti">Spesso, è il mio genere di contenuti</button>
+              </div>
+              <p class="beta-error" data-error="photos">Scegli un'opzione.</p>
+            </div>
+
+            <!-- Hai mai usato app simili? -->
+            <div class="beta-field" data-field="apps">
+              <span class="beta-label" id="appsLabel">Hai mai usato app simili (Whering, Acloset, Indyx...)?</span>
+              <div class="beta-pills" role="radiogroup" aria-labelledby="appsLabel" data-pills="apps">
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="No, mai sentite">No, mai sentite</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Le conosco ma non le ho usate">Le conosco ma non le ho usate</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Sì, le ho provate">Sì, le ho provate</button>
+              </div>
+              <p class="beta-error" data-error="apps">Scegli un'opzione.</p>
+            </div>
+
+            <!-- Quanto tempo perdi a decidere cosa metterti? -->
+            <div class="beta-field" data-field="time">
+              <span class="beta-label" id="timeLabel">Quanto tempo perdi a decidere cosa metterti?</span>
+              <div class="beta-pills" role="radiogroup" aria-labelledby="timeLabel" data-pills="time">
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Quasi zero, vado sul sicuro">Quasi zero, vado sul sicuro</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="5-10 minuti">5-10 minuti</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Troppo, è un problema vero">Troppo, è un problema vero</button>
+              </div>
+              <p class="beta-error" data-error="time">Scegli un'opzione.</p>
+            </div>
+
+            <!-- Quanti anni hai? -->
+            <div class="beta-field" data-field="age">
+              <span class="beta-label" id="ageLabel">Quanti anni hai?</span>
+              <div class="beta-pills beta-pills--grid" role="radiogroup" aria-labelledby="ageLabel" data-pills="age">
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Meno di 18 anni">Meno di 18 anni</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="18–24">18–24</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="25–34">25–34</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="35–44">35–44</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="45+">45+</button>
+              </div>
+              <p class="beta-error" data-error="age">Scegli un'opzione.</p>
+            </div>
+
             <!-- 1. Username Telegram -->
             <div class="beta-field" data-field="telegram">
               <label class="beta-label" for="betaTelegram">Username Telegram</label>
@@ -176,6 +222,10 @@
         var ENDPOINT =
           "https://docs.google.com/forms/d/e/1FAIpQLSfJchtlnaJ9JC-WSQ7JdFcYwMC90l9cGJJYLcOmADBKfhdsFw/formResponse";
         var ENTRY = {
+          photos: "entry.325565126",
+          apps: "entry.1817226168",
+          time: "entry.949092732",
+          age: "entry.1274027624",
           telegram: "entry.1948414089",
           phone: "entry.810963307",
           model: "entry.1170469488",
@@ -195,7 +245,7 @@
         if (!form || !card) return;
 
         // selected values for the custom pill groups
-        var picks = { phone: "", items: "", feedback: "", source: "" };
+        var picks = { photos: "", apps: "", time: "", age: "", phone: "", items: "", feedback: "", source: "" };
         var mode = "ios"; // "ios" | "android"
 
         /* ---------- pill (segmented) groups ---------- */
@@ -267,6 +317,15 @@
           var ok = true;
           var firstBad = null;
 
+          // domande iniziali (sempre obbligatorie, anche nel flusso Android)
+          ["photos", "apps", "time", "age"].forEach(function (key) {
+            if (!picks[key]) {
+              setError(key);
+              ok = false;
+              firstBad = firstBad || form.querySelector('[data-pills="' + key + '"]');
+            }
+          });
+
           var tgInput = document.getElementById("betaTelegram");
           var tg = normalizeTelegram(tgInput.value);
           if (!tg) {
@@ -327,6 +386,10 @@
           if (!validate()) return;
 
           var params = new URLSearchParams();
+          params.append(ENTRY.photos, picks.photos);
+          params.append(ENTRY.apps, picks.apps);
+          params.append(ENTRY.time, picks.time);
+          params.append(ENTRY.age, picks.age);
           params.append(ENTRY.telegram, normalizeTelegram(document.getElementById("betaTelegram").value));
           params.append(ENTRY.phone, picks.phone);
           params.append(ENTRY.source, picks.source);
