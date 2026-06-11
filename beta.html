@@ -90,7 +90,6 @@
                   <option value="iPhone 15 o più recente">iPhone 15 o più recente</option>
                   <option value="iPhone 12 / 13 / 14">iPhone 12 / 13 / 14</option>
                   <option value="iPhone 11 o precedente">iPhone 11 o precedente</option>
-                  <option value="Non lo so">Non lo so</option>
                 </select>
                 <p class="beta-error" data-error="model">Seleziona il modello.</p>
               </div>
@@ -99,10 +98,10 @@
               <div class="beta-field" data-field="items">
                 <span class="beta-label" id="itemsLabel">Quanti capi hai più o meno nell'armadio?</span>
                 <div class="beta-pills beta-pills--grid" role="radiogroup" aria-labelledby="itemsLabel" data-pills="items">
-                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Meno di 50">Meno di 50</button>
-                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="50–100">50–100</button>
-                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="100–200">100–200</button>
-                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Più di 200">Più di 200</button>
+                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Meno di 10">Meno di 10</button>
+                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="10–30">10–30</button>
+                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="30–60">30–60</button>
+                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Più di 60">Più di 60</button>
                 </div>
                 <p class="beta-error" data-error="items">Scegli un'opzione.</p>
               </div>
@@ -118,16 +117,15 @@
               </div>
             </div>
 
-            <!-- 6. Come hai scoperto Vestimy? (sempre visibile, opzionale) -->
+            <!-- 6. Come hai scoperto Vestimy? (sempre visibile, obbligatorio) -->
             <div class="beta-field" data-field="source">
-              <label class="beta-label" for="betaSource">Come hai scoperto Vestimy? <span class="beta-opt">(facoltativo)</span></label>
-              <input
-                class="wl-input"
-                type="text"
-                id="betaSource"
-                autocomplete="off"
-                placeholder="Telegram, un amico, social…"
-              />
+              <span class="beta-label" id="sourceLabel">Come hai scoperto Vestimy?</span>
+              <div class="beta-pills" role="radiogroup" aria-labelledby="sourceLabel" data-pills="source">
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Telegram">Telegram</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Reddit">Reddit</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Passaparola">Passaparola</button>
+              </div>
+              <p class="beta-error" data-error="source">Scegli un'opzione.</p>
             </div>
 
             <!-- nota waitlist (solo Android) -->
@@ -198,7 +196,7 @@
         if (!form || !card) return;
 
         // selected values for the custom pill groups
-        var picks = { phone: "", items: "", feedback: "" };
+        var picks = { phone: "", items: "", feedback: "", source: "" };
         var mode = "ios"; // "ios" | "android"
 
         /* ---------- pill (segmented) groups ---------- */
@@ -303,6 +301,12 @@
             }
           }
 
+          if (!picks.source) {
+            setError("source");
+            ok = false;
+            firstBad = firstBad || form.querySelector('[data-pills="source"]');
+          }
+
           if (!ok && firstBad && firstBad.scrollIntoView) {
             firstBad.scrollIntoView({ behavior: "smooth", block: "center" });
             if (firstBad.focus) firstBad.focus({ preventScroll: true });
@@ -326,8 +330,7 @@
           var params = new URLSearchParams();
           params.append(ENTRY.telegram, normalizeTelegram(document.getElementById("betaTelegram").value));
           params.append(ENTRY.phone, picks.phone);
-          var source = document.getElementById("betaSource").value.trim();
-          if (source) params.append(ENTRY.source, source);
+          params.append(ENTRY.source, picks.source);
           if (mode === "ios") {
             params.append(ENTRY.model, document.getElementById("betaModel").value);
             params.append(ENTRY.items, picks.items);
