@@ -51,13 +51,44 @@
 
         <div class="beta-card glass glass--high reveal" id="betaCard">
           <form class="beta-form" id="betaForm" novalidate>
+            <!-- 1. Username Telegram -->
+            <div class="beta-field" data-field="telegram">
+              <label class="beta-label" for="betaTelegram">Username Telegram</label>
+              <input
+                class="wl-input"
+                type="text"
+                id="betaTelegram"
+                inputmode="text"
+                autocapitalize="none"
+                autocorrect="off"
+                spellcheck="false"
+                autocomplete="off"
+                placeholder="@username"
+              />
+              <p class="beta-hint">Ti aggiungeremo al gruppo riservato con questo.</p>
+              <p class="beta-error" data-error="telegram">Inserisci il tuo username Telegram.</p>
+            </div>
+
+            <!-- Quanti anni hai? -->
+            <div class="beta-field" data-field="age">
+              <span class="beta-label" id="ageLabel">Quanti anni hai?</span>
+              <div class="beta-pills beta-pills--grid" role="radiogroup" aria-labelledby="ageLabel" data-pills="age">
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Meno di 18 anni">Meno di 18 anni</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="18–24">18–24</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="25–34">25–34</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="35–44">35–44</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="45+">45+</button>
+              </div>
+              <p class="beta-error" data-error="age">Scegli un'opzione.</p>
+            </div>
+
             <!-- Quante foto fai ai tuoi outfit? -->
             <div class="beta-field" data-field="photos">
               <span class="beta-label" id="photosLabel">Quante foto fai ai tuoi outfit?</span>
               <div class="beta-pills" role="radiogroup" aria-labelledby="photosLabel" data-pills="photos">
                 <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Mai">Mai</button>
                 <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Ogni tanto">Ogni tanto</button>
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Spesso, è il mio genere di contenuti">Spesso, è il mio genere di contenuti</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Spesso">Spesso</button>
               </div>
               <p class="beta-error" data-error="photos">Scegli un'opzione.</p>
             </div>
@@ -79,43 +110,34 @@
               <div class="beta-pills" role="radiogroup" aria-labelledby="timeLabel" data-pills="time">
                 <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Quasi zero, vado sul sicuro">Quasi zero, vado sul sicuro</button>
                 <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="5-10 minuti">5-10 minuti</button>
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Troppo, è un problema vero">Troppo, è un problema vero</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Troppo">Troppo</button>
               </div>
               <p class="beta-error" data-error="time">Scegli un'opzione.</p>
             </div>
 
-            <!-- Quanti anni hai? -->
-            <div class="beta-field" data-field="age">
-              <span class="beta-label" id="ageLabel">Quanti anni hai?</span>
-              <div class="beta-pills beta-pills--grid" role="radiogroup" aria-labelledby="ageLabel" data-pills="age">
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Meno di 18 anni">Meno di 18 anni</button>
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="18–24">18–24</button>
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="25–34">25–34</button>
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="35–44">35–44</button>
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="45+">45+</button>
+            <!-- Quanti capi -->
+            <div class="beta-field" data-field="items">
+              <span class="beta-label" id="itemsLabel">Quanti capi hai più o meno nell'armadio?</span>
+              <div class="beta-pills beta-pills--grid" role="radiogroup" aria-labelledby="itemsLabel" data-pills="items">
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Meno di 10">Meno di 10</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="10–30">10–30</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="30–60">30–60</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Più di 60">Più di 60</button>
               </div>
-              <p class="beta-error" data-error="age">Scegli un'opzione.</p>
+              <p class="beta-error" data-error="items">Scegli un'opzione.</p>
             </div>
 
-            <!-- 1. Username Telegram -->
-            <div class="beta-field" data-field="telegram">
-              <label class="beta-label" for="betaTelegram">Username Telegram</label>
-              <input
-                class="wl-input"
-                type="text"
-                id="betaTelegram"
-                inputmode="text"
-                autocapitalize="none"
-                autocorrect="off"
-                spellcheck="false"
-                autocomplete="off"
-                placeholder="@username"
-              />
-              <p class="beta-hint">Ti aggiungeremo al gruppo riservato con questo.</p>
-              <p class="beta-error" data-error="telegram">Inserisci il tuo username Telegram.</p>
+            <!-- Disponibilità feedback -->
+            <div class="beta-field" data-field="feedback">
+              <span class="beta-label" id="feedbackLabel">Sei disposto/a a rispondere a 2-3 domande a settimana nel gruppo e segnalare bug?</span>
+              <div class="beta-pills" role="radiogroup" aria-labelledby="feedbackLabel" data-pills="feedback">
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Sì, ci sto">Sì, ci sto</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Solo se ho tempo">Solo se ho tempo</button>
+              </div>
+              <p class="beta-error" data-error="feedback">Scegli un'opzione.</p>
             </div>
 
-            <!-- 2. Che telefono usi? -->
+            <!-- Che telefono usi? -->
             <div class="beta-field" data-field="phone">
               <span class="beta-label" id="phoneLabel">Che telefono usi?</span>
               <div class="beta-pills" role="radiogroup" aria-labelledby="phoneLabel" data-pills="phone">
@@ -125,9 +147,9 @@
               <p class="beta-error" data-error="phone">Scegli un'opzione.</p>
             </div>
 
-            <!-- conditional iPhone-only block (3, 4, 5) - nascosto finché non si sceglie iPhone -->
+            <!-- conditional iPhone-only: nascosto finché non si sceglie iPhone -->
             <div class="beta-collapse is-collapsed" id="iosFields">
-              <!-- 3. Modello iPhone -->
+              <!-- Modello iPhone -->
               <div class="beta-field" data-field="model">
                 <label class="beta-label" for="betaModel">Che modello di iPhone hai?</label>
                 <select class="beta-select" id="betaModel">
@@ -137,28 +159,6 @@
                   <option value="iPhone 11 o precedente">iPhone 11 o precedente</option>
                 </select>
                 <p class="beta-error" data-error="model">Seleziona il modello.</p>
-              </div>
-
-              <!-- 4. Quanti capi -->
-              <div class="beta-field" data-field="items">
-                <span class="beta-label" id="itemsLabel">Quanti capi hai più o meno nell'armadio?</span>
-                <div class="beta-pills beta-pills--grid" role="radiogroup" aria-labelledby="itemsLabel" data-pills="items">
-                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Meno di 10">Meno di 10</button>
-                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="10–30">10–30</button>
-                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="30–60">30–60</button>
-                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Più di 60">Più di 60</button>
-                </div>
-                <p class="beta-error" data-error="items">Scegli un'opzione.</p>
-              </div>
-
-              <!-- 5. Disponibilità feedback -->
-              <div class="beta-field" data-field="feedback">
-                <span class="beta-label" id="feedbackLabel">Sei disposto/a a rispondere a 2-3 domande a settimana nel gruppo e segnalare bug?</span>
-                <div class="beta-pills" role="radiogroup" aria-labelledby="feedbackLabel" data-pills="feedback">
-                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Sì, ci sto">Sì, ci sto</button>
-                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Solo se ho tempo">Solo se ho tempo</button>
-                </div>
-                <p class="beta-error" data-error="feedback">Scegli un'opzione.</p>
               </div>
             </div>
 
@@ -275,10 +275,8 @@
             iosFields.classList.add("is-collapsed");
             androidNote.classList.remove("is-collapsed");
             submitBtn.textContent = "Mettimi in lista d'attesa";
-            // i campi nascosti non possono restare in errore
+            // il campo nascosto non può restare in errore
             clearError("model");
-            clearError("items");
-            clearError("feedback");
           } else {
             mode = "ios";
             iosFields.classList.remove("is-collapsed");
@@ -317,8 +315,16 @@
           var ok = true;
           var firstBad = null;
 
-          // domande iniziali (sempre obbligatorie, anche nel flusso Android)
-          ["photos", "apps", "time", "age"].forEach(function (key) {
+          // username Telegram (prima domanda)
+          var tgInput = document.getElementById("betaTelegram");
+          if (!normalizeTelegram(tgInput.value)) {
+            setError("telegram");
+            ok = false;
+            firstBad = firstBad || tgInput;
+          }
+
+          // domande sempre obbligatorie, anche nel flusso Android
+          ["age", "photos", "apps", "time", "items", "feedback"].forEach(function (key) {
             if (!picks[key]) {
               setError(key);
               ok = false;
@@ -326,36 +332,19 @@
             }
           });
 
-          var tgInput = document.getElementById("betaTelegram");
-          var tg = normalizeTelegram(tgInput.value);
-          if (!tg) {
-            setError("telegram");
-            ok = false;
-            firstBad = firstBad || tgInput;
-          }
-
           if (!picks.phone) {
             setError("phone");
             ok = false;
             firstBad = firstBad || form.querySelector('[data-pills="phone"]');
           }
 
+          // modello iPhone: obbligatorio solo se visibile
           if (picks.phone === "iPhone") {
             var modelSel = document.getElementById("betaModel");
             if (!modelSel.value) {
               setError("model");
               ok = false;
               firstBad = firstBad || modelSel;
-            }
-            if (!picks.items) {
-              setError("items");
-              ok = false;
-              firstBad = firstBad || form.querySelector('[data-pills="items"]');
-            }
-            if (!picks.feedback) {
-              setError("feedback");
-              ok = false;
-              firstBad = firstBad || form.querySelector('[data-pills="feedback"]');
             }
           }
 
@@ -386,17 +375,17 @@
           if (!validate()) return;
 
           var params = new URLSearchParams();
+          params.append(ENTRY.telegram, normalizeTelegram(document.getElementById("betaTelegram").value));
+          params.append(ENTRY.age, picks.age);
           params.append(ENTRY.photos, picks.photos);
           params.append(ENTRY.apps, picks.apps);
           params.append(ENTRY.time, picks.time);
-          params.append(ENTRY.age, picks.age);
-          params.append(ENTRY.telegram, normalizeTelegram(document.getElementById("betaTelegram").value));
+          params.append(ENTRY.items, picks.items);
+          params.append(ENTRY.feedback, picks.feedback);
           params.append(ENTRY.phone, picks.phone);
           params.append(ENTRY.source, picks.source);
           if (picks.phone === "iPhone") {
             params.append(ENTRY.model, document.getElementById("betaModel").value);
-            params.append(ENTRY.items, picks.items);
-            params.append(ENTRY.feedback, picks.feedback);
           }
 
           submitting = true;
