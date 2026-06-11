@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candidati alla closed beta - Vestimy</title>
+    <meta name="description"
+      content="Candidati alla closed beta di Vestimy, l'app che digitalizza il tuo guardaroba. Posti limitati su iPhone: lascia i tuoi dati e ti scriviamo su Telegram." />
+    <meta name="robots" content="noindex" />
+    <meta property="og:title" content="Candidati alla closed beta - Vestimy" />
+    <meta property="og:description" content="Posti limitati su iPhone. Lascia i tuoi dati e ti scriviamo su Telegram." />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <canvas id="aurora"></canvas>
+    <div class="grain"></div>
+
+    <!-- ===================== NAV ===================== -->
+    <header class="nav">
+      <div class="wrap">
+        <nav class="nav__inner glass glass--high">
+          <a class="brand" href="/">
+            <img src="assets/icon.png" alt="Vestimy" />
+            Vestimy
+          </a>
+          <div class="nav__links">
+            <a href="/#how">Come funziona</a>
+            <a href="/#drippamy">Drippamy</a>
+            <a href="/support">Supporto</a>
+          </div>
+          <div class="nav__cta">
+            <a href="/" class="btn btn--ghost">← Home</a>
+            <button class="nav__burger" aria-label="Menu">☰</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="doc">
+      <div class="wrap">
+        <div class="doc__head reveal">
+          <p class="eyebrow">Beta privata · iPhone</p>
+          <h1>Candidati alla closed beta.</h1>
+          <p>
+            Stiamo aprendo Vestimy a piccoli gruppi di tester. Raccontaci due
+            cose su di te: se sei tra i selezionati, ti scriviamo su Telegram.
+          </p>
+        </div>
+
+        <div class="beta-card glass glass--high reveal" id="betaCard">
+          <form class="beta-form" id="betaForm" novalidate>
+            <!-- 1. Username Telegram -->
+            <div class="beta-field" data-field="telegram">
+              <label class="beta-label" for="betaTelegram">Username Telegram</label>
+              <input
+                class="wl-input"
+                type="text"
+                id="betaTelegram"
+                inputmode="text"
+                autocapitalize="none"
+                autocorrect="off"
+                spellcheck="false"
+                autocomplete="off"
+                placeholder="@username"
+              />
+              <p class="beta-hint">Ti aggiungeremo al gruppo riservato con questo.</p>
+              <p class="beta-error" data-error="telegram">Inserisci il tuo username Telegram.</p>
+            </div>
+
+            <!-- 2. Che telefono usi? -->
+            <div class="beta-field" data-field="phone">
+              <span class="beta-label" id="phoneLabel">Che telefono usi?</span>
+              <div class="beta-pills" role="radiogroup" aria-labelledby="phoneLabel" data-pills="phone">
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="iPhone">iPhone</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Android">Android</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Entrambi">Entrambi</button>
+              </div>
+              <p class="beta-error" data-error="phone">Scegli un'opzione.</p>
+            </div>
+
+            <!-- conditional iPhone-only block (3, 4, 5) -->
+            <div class="beta-collapse" id="iosFields">
+              <!-- 3. Modello iPhone -->
+              <div class="beta-field" data-field="model">
+                <label class="beta-label" for="betaModel">Che modello di iPhone hai?</label>
+                <select class="beta-select" id="betaModel">
+                  <option value="" disabled selected>Seleziona…</option>
+                  <option value="iPhone 15 o più recente">iPhone 15 o più recente</option>
+                  <option value="iPhone 12 / 13 / 14">iPhone 12 / 13 / 14</option>
+                  <option value="iPhone 11 o precedente">iPhone 11 o precedente</option>
+                  <option value="Non lo so">Non lo so</option>
+                </select>
+                <p class="beta-error" data-error="model">Seleziona il modello.</p>
+              </div>
+
+              <!-- 4. Quanti capi -->
+              <div class="beta-field" data-field="items">
+                <span class="beta-label" id="itemsLabel">Quanti capi hai più o meno nell'armadio?</span>
+                <div class="beta-pills beta-pills--grid" role="radiogroup" aria-labelledby="itemsLabel" data-pills="items">
+                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Meno di 50">Meno di 50</button>
+                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="50–100">50–100</button>
+                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="100–200">100–200</button>
+                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Più di 200">Più di 200</button>
+                </div>
+                <p class="beta-error" data-error="items">Scegli un'opzione.</p>
+              </div>
+
+              <!-- 5. Disponibilità feedback -->
+              <div class="beta-field" data-field="feedback">
+                <span class="beta-label" id="feedbackLabel">Sei disposto/a a rispondere a 2-3 domande a settimana nel gruppo e segnalare bug?</span>
+                <div class="beta-pills" role="radiogroup" aria-labelledby="feedbackLabel" data-pills="feedback">
+                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Sì, ci sto">Sì, ci sto</button>
+                  <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Solo se ho tempo">Solo se ho tempo</button>
+                </div>
+                <p class="beta-error" data-error="feedback">Scegli un'opzione.</p>
+              </div>
+            </div>
+
+            <!-- 6. Come hai scoperto Vestimy? (sempre visibile, opzionale) -->
+            <div class="beta-field" data-field="source">
+              <label class="beta-label" for="betaSource">Come hai scoperto Vestimy? <span class="beta-opt">(facoltativo)</span></label>
+              <input
+                class="wl-input"
+                type="text"
+                id="betaSource"
+                autocomplete="off"
+                placeholder="Telegram, un amico, social…"
+              />
+            </div>
+
+            <!-- nota waitlist (solo Android) -->
+            <div class="beta-collapse is-collapsed" id="androidNote">
+              <p class="beta-note">
+                Per ora la beta è solo su iPhone 😔 Lasciaci il contatto: appena
+                arriviamo su Android sarai tra i primi a saperlo.
+              </p>
+            </div>
+
+            <!-- honeypot: i bot la riempiono, gli umani non la vedono -->
+            <input class="beta-hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <p class="beta-formerror" id="betaFormError" role="alert">
+              Qualcosa è andato storto. Controlla la connessione e riprova.
+            </p>
+
+            <button type="submit" class="btn btn--primary btn--lg" id="betaSubmit">
+              Candidati alla beta
+            </button>
+          </form>
+
+          <div class="beta-success" role="status" aria-live="polite">
+            <div class="wl-success__ic">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg>
+            </div>
+            <h2 class="beta-success__t" id="betaSuccessTitle">Grazie! 🦩</h2>
+            <p class="beta-success__d" id="betaSuccessBody">
+              Stiamo selezionando i tester a piccoli gruppi. Se sei dentro, ti
+              scriviamo su Telegram entro pochi giorni.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__bottom" style="border: 0; justify-content: center; gap: 24px;">
+          <a href="/" style="font-weight: 600;">Home</a>
+          <a href="/privacy" style="font-weight: 600;">Privacy Policy</a>
+          <span>© 2026 Vestimy · privacy@vestimy.com</span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var ENDPOINT =
+          "https://docs.google.com/forms/d/e/1FAIpQLSfJchtlnaJ9JC-WSQ7JdFcYwMC90l9cGJJYLcOmADBKfhdsFw/formResponse";
+        var ENTRY = {
+          telegram: "entry.1948414089",
+          phone: "entry.810963307",
+          model: "entry.1170469488",
+          items: "entry.560183156",
+          feedback: "entry.717418359",
+          source: "entry.430921185",
+        };
+
+        var form = document.getElementById("betaForm");
+        var card = document.getElementById("betaCard");
+        var iosFields = document.getElementById("iosFields");
+        var androidNote = document.getElementById("androidNote");
+        var submitBtn = document.getElementById("betaSubmit");
+        var formError = document.getElementById("betaFormError");
+        var successTitle = document.getElementById("betaSuccessTitle");
+        var successBody = document.getElementById("betaSuccessBody");
+        if (!form || !card) return;
+
+        // selected values for the custom pill groups
+        var picks = { phone: "", items: "", feedback: "" };
+        var mode = "ios"; // "ios" | "android"
+
+        /* ---------- pill (segmented) groups ---------- */
+        var groups = form.querySelectorAll("[data-pills]");
+        groups.forEach(function (group) {
+          var key = group.getAttribute("data-pills");
+          var pills = group.querySelectorAll(".beta-pill");
+          pills.forEach(function (pill) {
+            pill.addEventListener("click", function () {
+              pills.forEach(function (p) {
+                p.classList.remove("is-active");
+                p.setAttribute("aria-checked", "false");
+              });
+              pill.classList.add("is-active");
+              pill.setAttribute("aria-checked", "true");
+              picks[key] = pill.getAttribute("data-value");
+              clearError(key);
+              if (key === "phone") applyPhone(picks.phone);
+            });
+          });
+        });
+
+        /* ---------- conditional logic ---------- */
+        function applyPhone(value) {
+          if (value === "Android") {
+            mode = "android";
+            iosFields.classList.add("is-collapsed");
+            androidNote.classList.remove("is-collapsed");
+            submitBtn.textContent = "Mettimi in lista d'attesa";
+            // i campi nascosti non possono restare in errore
+            clearError("model");
+            clearError("items");
+            clearError("feedback");
+          } else {
+            mode = "ios";
+            iosFields.classList.remove("is-collapsed");
+            androidNote.classList.add("is-collapsed");
+            submitBtn.textContent = "Candidati alla beta";
+          }
+        }
+
+        /* ---------- validation helpers ---------- */
+        function fieldEl(key) {
+          return form.querySelector('[data-field="' + key + '"]');
+        }
+        function setError(key) {
+          var el = fieldEl(key);
+          if (el) el.classList.add("has-error");
+        }
+        function clearError(key) {
+          var el = fieldEl(key);
+          if (el) el.classList.remove("has-error");
+        }
+
+        // clear text-field errors as the user types
+        form.querySelectorAll(".wl-input, .beta-select").forEach(function (input) {
+          input.addEventListener("input", function () {
+            var f = input.closest(".beta-field");
+            if (f) f.classList.remove("has-error");
+          });
+        });
+
+        function normalizeTelegram(v) {
+          v = (v || "").trim().replace(/^@+/, "");
+          return v ? "@" + v : "";
+        }
+
+        function validate() {
+          var ok = true;
+          var firstBad = null;
+
+          var tgInput = document.getElementById("betaTelegram");
+          var tg = normalizeTelegram(tgInput.value);
+          if (!tg) {
+            setError("telegram");
+            ok = false;
+            firstBad = firstBad || tgInput;
+          }
+
+          if (!picks.phone) {
+            setError("phone");
+            ok = false;
+            firstBad = firstBad || form.querySelector('[data-pills="phone"]');
+          }
+
+          if (mode === "ios") {
+            var modelSel = document.getElementById("betaModel");
+            if (!modelSel.value) {
+              setError("model");
+              ok = false;
+              firstBad = firstBad || modelSel;
+            }
+            if (!picks.items) {
+              setError("items");
+              ok = false;
+              firstBad = firstBad || form.querySelector('[data-pills="items"]');
+            }
+            if (!picks.feedback) {
+              setError("feedback");
+              ok = false;
+              firstBad = firstBad || form.querySelector('[data-pills="feedback"]');
+            }
+          }
+
+          if (!ok && firstBad && firstBad.scrollIntoView) {
+            firstBad.scrollIntoView({ behavior: "smooth", block: "center" });
+            if (firstBad.focus) firstBad.focus({ preventScroll: true });
+          }
+          return ok;
+        }
+
+        /* ---------- submit ---------- */
+        var submitting = false;
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // honeypot
+          var hp = form.querySelector(".beta-hp");
+          if (hp && hp.value) return;
+
+          formError.classList.remove("is-shown");
+          if (submitting) return;
+          if (!validate()) return;
+
+          var params = new URLSearchParams();
+          params.append(ENTRY.telegram, normalizeTelegram(document.getElementById("betaTelegram").value));
+          params.append(ENTRY.phone, picks.phone);
+          var source = document.getElementById("betaSource").value.trim();
+          if (source) params.append(ENTRY.source, source);
+          if (mode === "ios") {
+            params.append(ENTRY.model, document.getElementById("betaModel").value);
+            params.append(ENTRY.items, picks.items);
+            params.append(ENTRY.feedback, picks.feedback);
+          }
+
+          submitting = true;
+          submitBtn.disabled = true;
+          submitBtn.dataset.label = submitBtn.textContent;
+          submitBtn.textContent = "Invio in corso…";
+
+          fetch(ENDPOINT, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: params.toString(),
+          })
+            .then(function () {
+              // risposta opaca (no-cors): se la fetch non lancia, è andata.
+              if (mode === "android") {
+                successTitle.textContent = "Sei in lista 🦩";
+                successBody.textContent =
+                  "Per ora la beta è solo su iPhone, ma appena arriviamo su Android sarai tra i primi a saperlo. Ti scriviamo su Telegram.";
+              } else {
+                successTitle.textContent = "Grazie! 🦩";
+                successBody.textContent =
+                  "Stiamo selezionando i tester a piccoli gruppi. Se sei dentro, ti scriviamo su Telegram entro pochi giorni.";
+              }
+              card.classList.add("is-done");
+              card.scrollIntoView({ behavior: "smooth", block: "center" });
+            })
+            .catch(function () {
+              // errore di rete: i dati restano, si può riprovare
+              submitting = false;
+              submitBtn.disabled = false;
+              submitBtn.textContent = submitBtn.dataset.label || "Candidati alla beta";
+              formError.classList.add("is-shown");
+            });
+        });
+      })();
+    </script>
+    <script src="js/aurora.js"></script>
+  </body>
+</html>
