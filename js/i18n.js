@@ -195,6 +195,60 @@
       "wl.alt.link": "Join the beta now →",
       "wl.home": "Home",
 
+      /* ===== CLOSED BETA (beta.html) ===== */
+      "beta.meta.title": "Apply to the closed beta - Vestimy",
+      "beta.meta.desc":
+        "Apply to Vestimy's closed beta, the app that digitalizes your wardrobe. Limited spots on iPhone: leave your details and we'll message you on Telegram.",
+      "beta.back": "← Home",
+      "beta.eyebrow": "Private beta · iPhone",
+      "beta.title": "Apply to the closed beta.",
+      "beta.lead":
+        "We're opening Vestimy to small groups of testers. Tell us a couple of things about you - if you're selected, we'll message you on Telegram.",
+      "beta.telegram.label": "Telegram username",
+      "beta.telegram.hint": "We'll add you to the private group with this.",
+      "beta.telegram.err": "Enter your Telegram username.",
+      "beta.age.label": "How old are you?",
+      "beta.age.u18": "Under 18",
+      "beta.photos.label": "How often do you photograph your outfits?",
+      "beta.photos.never": "Never",
+      "beta.photos.some": "Sometimes",
+      "beta.photos.often": "Often",
+      "beta.apps.label": "Have you ever used similar apps (Whering, Acloset, Indyx...)?",
+      "beta.apps.never": "No, never heard of them",
+      "beta.apps.know": "I know them but haven't used them",
+      "beta.apps.tried": "Yes, I've tried them",
+      "beta.time.label": "How much time do you waste deciding what to wear?",
+      "beta.time.zero": "Almost none, I play it safe",
+      "beta.time.mid": "5-10 minutes",
+      "beta.time.much": "Too much",
+      "beta.items.label": "Roughly how many garments are in your wardrobe?",
+      "beta.items.u10": "Under 10",
+      "beta.items.o60": "Over 60",
+      "beta.feedback.label": "Are you willing to answer 2-3 questions a week in the group and report bugs?",
+      "beta.feedback.yes": "Yes, I'm in",
+      "beta.feedback.time": "Only if I have time",
+      "beta.phone.label": "Which phone do you use?",
+      "beta.model.label": "Which iPhone model do you have?",
+      "beta.model.ph": "Select…",
+      "beta.model.new": "iPhone 15 or newer",
+      "beta.model.old": "iPhone 11 or older",
+      "beta.model.err": "Select the model.",
+      "beta.source.label": "How did you find out about Vestimy?",
+      "beta.source.wom": "Word of mouth",
+      "beta.choice.err": "Please choose an option.",
+      "beta.note":
+        "For now the beta is iPhone-only 😔 Leave us your contact: as soon as we land on Android you'll be among the first to know.",
+      "beta.neterror": "Something went wrong. Check your connection and try again.",
+      "beta.submit": "Apply to the beta",
+      "beta.waitlist": "Add me to the waitlist",
+      "beta.sending": "Sending…",
+      "beta.ok.t": "Thanks! 🦩",
+      "beta.ok.d":
+        "We're selecting testers in small groups. If you're in, we'll message you on Telegram within a few days.",
+      "beta.wl.t": "You're on the list 🦩",
+      "beta.wl.d":
+        "For now the beta is iPhone-only, but the moment we land on Android you'll be among the first to know. We'll message you on Telegram.",
+
       "foot.tag":
         "Vestimy digitalizes your wardrobe, helps you compose outfits, and inspires the next look - without buying more.",
       "foot.product": "Product",
@@ -507,6 +561,60 @@
       "wl.alt.link": "Prova subito la beta →",
       "wl.home": "Home",
 
+      /* ===== CLOSED BETA (beta.html) ===== */
+      "beta.meta.title": "Candidati alla closed beta - Vestimy",
+      "beta.meta.desc":
+        "Candidati alla closed beta di Vestimy, l'app che digitalizza il tuo guardaroba. Posti limitati su iPhone: lascia i tuoi dati e ti scriviamo su Telegram.",
+      "beta.back": "← Home",
+      "beta.eyebrow": "Beta privata · iPhone",
+      "beta.title": "Candidati alla closed beta.",
+      "beta.lead":
+        "Stiamo aprendo Vestimy a piccoli gruppi di tester. Raccontaci due cose su di te: se sei tra i selezionati, ti scriviamo su Telegram.",
+      "beta.telegram.label": "Username Telegram",
+      "beta.telegram.hint": "Ti aggiungeremo al gruppo riservato con questo.",
+      "beta.telegram.err": "Inserisci il tuo username Telegram.",
+      "beta.age.label": "Quanti anni hai?",
+      "beta.age.u18": "Meno di 18 anni",
+      "beta.photos.label": "Quante foto fai ai tuoi outfit?",
+      "beta.photos.never": "Mai",
+      "beta.photos.some": "Ogni tanto",
+      "beta.photos.often": "Spesso",
+      "beta.apps.label": "Hai mai usato app simili (Whering, Acloset, Indyx...)?",
+      "beta.apps.never": "No, mai sentite",
+      "beta.apps.know": "Le conosco ma non le ho usate",
+      "beta.apps.tried": "Sì, le ho provate",
+      "beta.time.label": "Quanto tempo perdi a decidere cosa metterti?",
+      "beta.time.zero": "Quasi zero, vado sul sicuro",
+      "beta.time.mid": "5-10 minuti",
+      "beta.time.much": "Troppo",
+      "beta.items.label": "Quanti capi hai più o meno nell'armadio?",
+      "beta.items.u10": "Meno di 10",
+      "beta.items.o60": "Più di 60",
+      "beta.feedback.label": "Sei disposto/a a rispondere a 2-3 domande a settimana nel gruppo e segnalare bug?",
+      "beta.feedback.yes": "Sì, ci sto",
+      "beta.feedback.time": "Solo se ho tempo",
+      "beta.phone.label": "Che telefono usi?",
+      "beta.model.label": "Che modello di iPhone hai?",
+      "beta.model.ph": "Seleziona…",
+      "beta.model.new": "iPhone 15 o più recente",
+      "beta.model.old": "iPhone 11 o precedente",
+      "beta.model.err": "Seleziona il modello.",
+      "beta.source.label": "Come hai scoperto Vestimy?",
+      "beta.source.wom": "Passaparola",
+      "beta.choice.err": "Scegli un'opzione.",
+      "beta.note":
+        "Per ora la beta è solo su iPhone 😔 Lasciaci il contatto: appena arriviamo su Android sarai tra i primi a saperlo.",
+      "beta.neterror": "Qualcosa è andato storto. Controlla la connessione e riprova.",
+      "beta.submit": "Candidati alla beta",
+      "beta.waitlist": "Mettimi in lista d'attesa",
+      "beta.sending": "Invio in corso…",
+      "beta.ok.t": "Grazie! 🦩",
+      "beta.ok.d":
+        "Stiamo selezionando i tester a piccoli gruppi. Se sei dentro, ti scriviamo su Telegram entro pochi giorni.",
+      "beta.wl.t": "Sei in lista 🦩",
+      "beta.wl.d":
+        "Per ora la beta è solo su iPhone, ma appena arriviamo su Android sarai tra i primi a saperlo. Ti scriviamo su Telegram.",
+
       "foot.tag":
         "Vestimy digitalizza il tuo guardaroba, ti aiuta a comporre outfit e ti ispira il prossimo look - senza comprare altro.",
       "foot.product": "Prodotto",
@@ -667,7 +775,12 @@
         });
     });
 
-    if (t("meta.title")) document.title = t("meta.title");
+    if (t("meta.title")) {
+      // pages can override the global title with their own data-i18n key
+      const titleEl = document.querySelector("title[data-i18n]");
+      const pageTitle = titleEl ? t(titleEl.getAttribute("data-i18n")) : null;
+      document.title = pageTitle != null ? pageTitle : t("meta.title");
+    }
 
     // reflect current language on the switcher
     document.querySelectorAll("[data-lang-btn]").forEach((btn) => {
@@ -678,6 +791,9 @@
     document.querySelectorAll("[data-lang-current]").forEach((el) => {
       el.textContent = lang.toUpperCase();
     });
+
+    // let pages react to language changes (e.g. JS-generated strings)
+    document.dispatchEvent(new CustomEvent("i18n:applied", { detail: { lang } }));
   }
 
   function set(lang) {
@@ -686,9 +802,15 @@
     apply(lang);
   }
 
+  function t(key, lang) {
+    const l = SUPPORTED.includes(lang) ? lang : detect();
+    const dict = DICT[l] || DICT.en;
+    return key in dict ? dict[key] : DICT.en[key];
+  }
+
   const current = detect();
   // expose
-  window.VestimyI18n = { set, apply, get: () => detect(), supported: SUPPORTED };
+  window.VestimyI18n = { set, apply, get: () => detect(), supported: SUPPORTED, t };
 
   function init() {
     apply(current);

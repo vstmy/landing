@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Candidati alla closed beta - Vestimy</title>
-    <meta name="description"
+    <title data-i18n="beta.meta.title">Candidati alla closed beta - Vestimy</title>
+    <meta name="description" data-i18n-attr="content:beta.meta.desc"
       content="Candidati alla closed beta di Vestimy, l'app che digitalizza il tuo guardaroba. Posti limitati su iPhone: lascia i tuoi dati e ti scriviamo su Telegram." />
     <meta name="robots" content="noindex" />
     <meta property="og:title" content="Candidati alla closed beta - Vestimy" />
@@ -26,12 +26,16 @@
             Vestimy
           </a>
           <div class="nav__links">
-            <a href="/#how">Come funziona</a>
-            <a href="/#drippamy">Drippamy</a>
-            <a href="/support">Supporto</a>
+            <a href="/#how" data-i18n="nav.how">Come funziona</a>
+            <a href="/#drippamy" data-i18n="nav.drippamy">Drippamy</a>
+            <a href="/support" data-i18n="nav.support">Supporto</a>
           </div>
           <div class="nav__cta">
-            <a href="/" class="btn btn--ghost">← Home</a>
+            <div class="lang" role="group" aria-label="Language">
+              <button data-lang-btn="en" aria-pressed="false">EN</button>
+              <button data-lang-btn="it" aria-pressed="true">IT</button>
+            </div>
+            <a href="/" class="btn btn--ghost" data-i18n="beta.back">← Home</a>
             <button class="nav__burger" aria-label="Menu">☰</button>
           </div>
         </nav>
@@ -41,9 +45,9 @@
     <main class="doc">
       <div class="wrap">
         <div class="doc__head reveal">
-          <p class="eyebrow">Beta privata · iPhone</p>
-          <h1>Candidati alla closed beta.</h1>
-          <p>
+          <p class="eyebrow" data-i18n="beta.eyebrow">Beta privata · iPhone</p>
+          <h1 data-i18n="beta.title">Candidati alla closed beta.</h1>
+          <p data-i18n="beta.lead">
             Stiamo aprendo Vestimy a piccoli gruppi di tester. Raccontaci due
             cose su di te: se sei tra i selezionati, ti scriviamo su Telegram.
           </p>
@@ -53,7 +57,7 @@
           <form class="beta-form" id="betaForm" novalidate>
             <!-- 1. Username Telegram -->
             <div class="beta-field" data-field="telegram">
-              <label class="beta-label" for="betaTelegram">Username Telegram</label>
+              <label class="beta-label" for="betaTelegram" data-i18n="beta.telegram.label">Username Telegram</label>
               <input
                 class="wl-input"
                 type="text"
@@ -65,117 +69,117 @@
                 autocomplete="off"
                 placeholder="@username"
               />
-              <p class="beta-hint">Ti aggiungeremo al gruppo riservato con questo.</p>
-              <p class="beta-error" data-error="telegram">Inserisci il tuo username Telegram.</p>
+              <p class="beta-hint" data-i18n="beta.telegram.hint">Ti aggiungeremo al gruppo riservato con questo.</p>
+              <p class="beta-error" data-error="telegram" data-i18n="beta.telegram.err">Inserisci il tuo username Telegram.</p>
             </div>
 
             <!-- Quanti anni hai? -->
             <div class="beta-field" data-field="age">
-              <span class="beta-label" id="ageLabel">Quanti anni hai?</span>
+              <span class="beta-label" id="ageLabel" data-i18n="beta.age.label">Quanti anni hai?</span>
               <div class="beta-pills beta-pills--grid" role="radiogroup" aria-labelledby="ageLabel" data-pills="age">
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Meno di 18 anni">Meno di 18 anni</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Meno di 18 anni" data-i18n="beta.age.u18">Meno di 18 anni</button>
                 <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="18–24">18–24</button>
                 <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="25–34">25–34</button>
                 <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="35–44">35–44</button>
                 <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="45+">45+</button>
               </div>
-              <p class="beta-error" data-error="age">Scegli un'opzione.</p>
+              <p class="beta-error" data-error="age" data-i18n="beta.choice.err">Scegli un'opzione.</p>
             </div>
 
             <!-- Quante foto fai ai tuoi outfit? -->
             <div class="beta-field" data-field="photos">
-              <span class="beta-label" id="photosLabel">Quante foto fai ai tuoi outfit?</span>
+              <span class="beta-label" id="photosLabel" data-i18n="beta.photos.label">Quante foto fai ai tuoi outfit?</span>
               <div class="beta-pills" role="radiogroup" aria-labelledby="photosLabel" data-pills="photos">
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Mai">Mai</button>
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Ogni tanto">Ogni tanto</button>
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Spesso">Spesso</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Mai" data-i18n="beta.photos.never">Mai</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Ogni tanto" data-i18n="beta.photos.some">Ogni tanto</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Spesso" data-i18n="beta.photos.often">Spesso</button>
               </div>
-              <p class="beta-error" data-error="photos">Scegli un'opzione.</p>
+              <p class="beta-error" data-error="photos" data-i18n="beta.choice.err">Scegli un'opzione.</p>
             </div>
 
             <!-- Hai mai usato app simili? -->
             <div class="beta-field" data-field="apps">
-              <span class="beta-label" id="appsLabel">Hai mai usato app simili (Whering, Acloset, Indyx...)?</span>
+              <span class="beta-label" id="appsLabel" data-i18n="beta.apps.label">Hai mai usato app simili (Whering, Acloset, Indyx...)?</span>
               <div class="beta-pills" role="radiogroup" aria-labelledby="appsLabel" data-pills="apps">
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="No, mai sentite">No, mai sentite</button>
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Le conosco ma non le ho usate">Le conosco ma non le ho usate</button>
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Sì, le ho provate">Sì, le ho provate</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="No, mai sentite" data-i18n="beta.apps.never">No, mai sentite</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Le conosco ma non le ho usate" data-i18n="beta.apps.know">Le conosco ma non le ho usate</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Sì, le ho provate" data-i18n="beta.apps.tried">Sì, le ho provate</button>
               </div>
-              <p class="beta-error" data-error="apps">Scegli un'opzione.</p>
+              <p class="beta-error" data-error="apps" data-i18n="beta.choice.err">Scegli un'opzione.</p>
             </div>
 
             <!-- Quanto tempo perdi a decidere cosa metterti? -->
             <div class="beta-field" data-field="time">
-              <span class="beta-label" id="timeLabel">Quanto tempo perdi a decidere cosa metterti?</span>
+              <span class="beta-label" id="timeLabel" data-i18n="beta.time.label">Quanto tempo perdi a decidere cosa metterti?</span>
               <div class="beta-pills" role="radiogroup" aria-labelledby="timeLabel" data-pills="time">
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Quasi zero, vado sul sicuro">Quasi zero, vado sul sicuro</button>
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="5-10 minuti">5-10 minuti</button>
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Troppo">Troppo</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Quasi zero, vado sul sicuro" data-i18n="beta.time.zero">Quasi zero, vado sul sicuro</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="5-10 minuti" data-i18n="beta.time.mid">5-10 minuti</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Troppo" data-i18n="beta.time.much">Troppo</button>
               </div>
-              <p class="beta-error" data-error="time">Scegli un'opzione.</p>
+              <p class="beta-error" data-error="time" data-i18n="beta.choice.err">Scegli un'opzione.</p>
             </div>
 
             <!-- Quanti capi -->
             <div class="beta-field" data-field="items">
-              <span class="beta-label" id="itemsLabel">Quanti capi hai più o meno nell'armadio?</span>
+              <span class="beta-label" id="itemsLabel" data-i18n="beta.items.label">Quanti capi hai più o meno nell'armadio?</span>
               <div class="beta-pills beta-pills--grid" role="radiogroup" aria-labelledby="itemsLabel" data-pills="items">
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Meno di 10">Meno di 10</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Meno di 10" data-i18n="beta.items.u10">Meno di 10</button>
                 <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="10–30">10–30</button>
                 <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="30–60">30–60</button>
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Più di 60">Più di 60</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Più di 60" data-i18n="beta.items.o60">Più di 60</button>
               </div>
-              <p class="beta-error" data-error="items">Scegli un'opzione.</p>
+              <p class="beta-error" data-error="items" data-i18n="beta.choice.err">Scegli un'opzione.</p>
             </div>
 
             <!-- Disponibilità feedback -->
             <div class="beta-field" data-field="feedback">
-              <span class="beta-label" id="feedbackLabel">Sei disposto/a a rispondere a 2-3 domande a settimana nel gruppo e segnalare bug?</span>
+              <span class="beta-label" id="feedbackLabel" data-i18n="beta.feedback.label">Sei disposto/a a rispondere a 2-3 domande a settimana nel gruppo e segnalare bug?</span>
               <div class="beta-pills" role="radiogroup" aria-labelledby="feedbackLabel" data-pills="feedback">
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Sì, ci sto">Sì, ci sto</button>
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Solo se ho tempo">Solo se ho tempo</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Sì, ci sto" data-i18n="beta.feedback.yes">Sì, ci sto</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Solo se ho tempo" data-i18n="beta.feedback.time">Solo se ho tempo</button>
               </div>
-              <p class="beta-error" data-error="feedback">Scegli un'opzione.</p>
+              <p class="beta-error" data-error="feedback" data-i18n="beta.choice.err">Scegli un'opzione.</p>
             </div>
 
             <!-- Che telefono usi? -->
             <div class="beta-field" data-field="phone">
-              <span class="beta-label" id="phoneLabel">Che telefono usi?</span>
+              <span class="beta-label" id="phoneLabel" data-i18n="beta.phone.label">Che telefono usi?</span>
               <div class="beta-pills" role="radiogroup" aria-labelledby="phoneLabel" data-pills="phone">
                 <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="iPhone">iPhone</button>
                 <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Android">Android</button>
               </div>
-              <p class="beta-error" data-error="phone">Scegli un'opzione.</p>
+              <p class="beta-error" data-error="phone" data-i18n="beta.choice.err">Scegli un'opzione.</p>
             </div>
 
             <!-- conditional iPhone-only: nascosto finché non si sceglie iPhone -->
             <div class="beta-collapse is-collapsed" id="iosFields">
               <!-- Modello iPhone -->
               <div class="beta-field" data-field="model">
-                <label class="beta-label" for="betaModel">Che modello di iPhone hai?</label>
+                <label class="beta-label" for="betaModel" data-i18n="beta.model.label">Che modello di iPhone hai?</label>
                 <select class="beta-select" id="betaModel">
-                  <option value="" disabled selected>Seleziona…</option>
-                  <option value="iPhone 15 o più recente">iPhone 15 o più recente</option>
+                  <option value="" disabled selected data-i18n="beta.model.ph">Seleziona…</option>
+                  <option value="iPhone 15 o più recente" data-i18n="beta.model.new">iPhone 15 o più recente</option>
                   <option value="iPhone 12 / 13 / 14">iPhone 12 / 13 / 14</option>
-                  <option value="iPhone 11 o precedente">iPhone 11 o precedente</option>
+                  <option value="iPhone 11 o precedente" data-i18n="beta.model.old">iPhone 11 o precedente</option>
                 </select>
-                <p class="beta-error" data-error="model">Seleziona il modello.</p>
+                <p class="beta-error" data-error="model" data-i18n="beta.model.err">Seleziona il modello.</p>
               </div>
             </div>
 
             <!-- 6. Come hai scoperto Vestimy? (sempre visibile, obbligatorio) -->
             <div class="beta-field" data-field="source">
-              <span class="beta-label" id="sourceLabel">Come hai scoperto Vestimy?</span>
+              <span class="beta-label" id="sourceLabel" data-i18n="beta.source.label">Come hai scoperto Vestimy?</span>
               <div class="beta-pills" role="radiogroup" aria-labelledby="sourceLabel" data-pills="source">
                 <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Telegram">Telegram</button>
                 <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Reddit">Reddit</button>
-                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Passaparola">Passaparola</button>
+                <button type="button" class="beta-pill" role="radio" aria-checked="false" data-value="Passaparola" data-i18n="beta.source.wom">Passaparola</button>
               </div>
-              <p class="beta-error" data-error="source">Scegli un'opzione.</p>
+              <p class="beta-error" data-error="source" data-i18n="beta.choice.err">Scegli un'opzione.</p>
             </div>
 
             <!-- nota waitlist (solo Android) -->
             <div class="beta-collapse is-collapsed" id="androidNote">
-              <p class="beta-note">
+              <p class="beta-note" data-i18n="beta.note">
                 Per ora la beta è solo su iPhone 😔 Lasciaci il contatto: appena
                 arriviamo su Android sarai tra i primi a saperlo.
               </p>
@@ -184,7 +188,7 @@
             <!-- honeypot: i bot la riempiono, gli umani non la vedono -->
             <input class="beta-hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
-            <p class="beta-formerror" id="betaFormError" role="alert">
+            <p class="beta-formerror" id="betaFormError" role="alert" data-i18n="beta.neterror">
               Qualcosa è andato storto. Controlla la connessione e riprova.
             </p>
 
@@ -197,11 +201,20 @@
             <div class="wl-success__ic">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg>
             </div>
-            <h2 class="beta-success__t" id="betaSuccessTitle">Grazie! 🦩</h2>
-            <p class="beta-success__d" id="betaSuccessBody">
-              Stiamo selezionando i tester a piccoli gruppi. Se sei dentro, ti
-              scriviamo su Telegram entro pochi giorni.
-            </p>
+            <div id="betaSuccessIos">
+              <h2 class="beta-success__t" data-i18n="beta.ok.t">Grazie! 🦩</h2>
+              <p class="beta-success__d" data-i18n="beta.ok.d">
+                Stiamo selezionando i tester a piccoli gruppi. Se sei dentro, ti
+                scriviamo su Telegram entro pochi giorni.
+              </p>
+            </div>
+            <div id="betaSuccessWl" hidden>
+              <h2 class="beta-success__t" data-i18n="beta.wl.t">Sei in lista 🦩</h2>
+              <p class="beta-success__d" data-i18n="beta.wl.d">
+                Per ora la beta è solo su iPhone, ma appena arriviamo su Android
+                sarai tra i primi a saperlo. Ti scriviamo su Telegram.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -217,6 +230,7 @@
       </div>
     </footer>
 
+    <script src="js/i18n.js"></script>
     <script>
       (function () {
         var ENDPOINT =
@@ -240,13 +254,30 @@
         var androidNote = document.getElementById("androidNote");
         var submitBtn = document.getElementById("betaSubmit");
         var formError = document.getElementById("betaFormError");
-        var successTitle = document.getElementById("betaSuccessTitle");
-        var successBody = document.getElementById("betaSuccessBody");
+        var successIos = document.getElementById("betaSuccessIos");
+        var successWl = document.getElementById("betaSuccessWl");
         if (!form || !card) return;
+
+        // i18n: translate a key for the current language (fallback = literal IT)
+        function t(key, fallback) {
+          var i18n = window.VestimyI18n;
+          var v = i18n && i18n.t ? i18n.t(key) : null;
+          return v != null ? v : fallback;
+        }
 
         // selected values for the custom pill groups
         var picks = { photos: "", apps: "", time: "", age: "", phone: "", items: "", feedback: "", source: "" };
         var mode = "ios"; // "ios" | "android"
+
+        // keep the submit label in sync with mode + current language
+        function renderButton() {
+          if (submitBtn.disabled) return; // loading: leave the "sending" label
+          submitBtn.textContent =
+            mode === "android"
+              ? t("beta.waitlist", "Mettimi in lista d'attesa")
+              : t("beta.submit", "Candidati alla beta");
+        }
+        document.addEventListener("i18n:applied", renderButton);
 
         /* ---------- pill (segmented) groups ---------- */
         var groups = form.querySelectorAll("[data-pills]");
@@ -274,15 +305,14 @@
             mode = "android";
             iosFields.classList.add("is-collapsed");
             androidNote.classList.remove("is-collapsed");
-            submitBtn.textContent = "Mettimi in lista d'attesa";
             // il campo nascosto non può restare in errore
             clearError("model");
           } else {
             mode = "ios";
             iosFields.classList.remove("is-collapsed");
             androidNote.classList.add("is-collapsed");
-            submitBtn.textContent = "Candidati alla beta";
           }
+          renderButton();
         }
 
         /* ---------- validation helpers ---------- */
@@ -390,8 +420,7 @@
 
           submitting = true;
           submitBtn.disabled = true;
-          submitBtn.dataset.label = submitBtn.textContent;
-          submitBtn.textContent = "Invio in corso…";
+          submitBtn.textContent = t("beta.sending", "Invio in corso…");
 
           fetch(ENDPOINT, {
             method: "POST",
@@ -401,15 +430,10 @@
           })
             .then(function () {
               // risposta opaca (no-cors): se la fetch non lancia, è andata.
-              if (mode === "android") {
-                successTitle.textContent = "Sei in lista 🦩";
-                successBody.textContent =
-                  "Per ora la beta è solo su iPhone, ma appena arriviamo su Android sarai tra i primi a saperlo. Ti scriviamo su Telegram.";
-              } else {
-                successTitle.textContent = "Grazie! 🦩";
-                successBody.textContent =
-                  "Stiamo selezionando i tester a piccoli gruppi. Se sei dentro, ti scriviamo su Telegram entro pochi giorni.";
-              }
+              // i testi del ringraziamento sono tradotti via data-i18n
+              var android = mode === "android";
+              successIos.hidden = android;
+              successWl.hidden = !android;
               card.classList.add("is-done");
               card.scrollIntoView({ behavior: "smooth", block: "center" });
             })
@@ -417,10 +441,13 @@
               // errore di rete: i dati restano, si può riprovare
               submitting = false;
               submitBtn.disabled = false;
-              submitBtn.textContent = submitBtn.dataset.label || "Candidati alla beta";
+              renderButton();
               formError.classList.add("is-shown");
             });
         });
+
+        // set the initial submit label in the current language
+        renderButton();
       })();
     </script>
     <script src="js/aurora.js"></script>
