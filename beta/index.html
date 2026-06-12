@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title data-i18n="beta.meta.title">Candidati alla closed beta - Vestimy</title>
-    <meta name="description" data-i18n-attr="content:beta.meta.desc"
-      content="Candidati alla closed beta di Vestimy, l'app che digitalizza il tuo guardaroba. Posti limitati su iPhone: lascia i tuoi dati e ti scriviamo su Telegram." />
+    <meta name="description" data-i18n-attr="content:beta.meta.desc.mail"
+      content="Candidati alla closed beta di Vestimy, l'app che digitalizza il tuo guardaroba. Posti limitati su iPhone: lascia i tuoi dati e ti scriviamo via email." />
     <meta name="robots" content="noindex" />
     <meta property="og:title" content="Candidati alla closed beta - Vestimy" />
-    <meta property="og:description" content="Posti limitati su iPhone. Lascia i tuoi dati e ti scriviamo su Telegram." />
-    <link rel="icon" type="image/png" href="assets/favicon.png" />
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <meta property="og:description" content="Posti limitati su iPhone. Lascia i tuoi dati e ti scriviamo via email." />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body class="page-beta">
     <canvas id="aurora"></canvas>
@@ -22,7 +22,7 @@
       <div class="wrap">
         <nav class="nav__inner glass glass--high">
           <a class="brand" href="/">
-            <img src="assets/icon.png" alt="Vestimy" />
+            <img src="/assets/icon.png" alt="Vestimy" />
             Vestimy
           </a>
           <div class="nav__links">
@@ -47,30 +47,31 @@
         <div class="doc__head reveal">
           <p class="eyebrow" data-i18n="beta.eyebrow">Beta privata · iPhone</p>
           <h1 data-i18n="beta.title">Candidati alla closed beta.</h1>
-          <p data-i18n="beta.lead">
+          <p data-i18n="beta.lead.mail">
             Stiamo aprendo Vestimy a piccoli gruppi di tester. Raccontaci due
-            cose su di te: se sei tra i selezionati, ti scriviamo su Telegram.
+            cose su di te: se sei tra i selezionati, ti scriviamo via email.
           </p>
         </div>
 
         <div class="beta-card glass glass--high reveal" id="betaCard">
           <form class="beta-form" id="betaForm" novalidate>
-            <!-- 1. Username Telegram -->
-            <div class="beta-field" data-field="telegram">
-              <label class="beta-label" for="betaTelegram" data-i18n="beta.telegram.label">Username Telegram</label>
+            <!-- 1. Email -->
+            <div class="beta-field" data-field="email">
+              <label class="beta-label" for="betaEmail" data-i18n="beta.email.label">Email</label>
               <input
                 class="wl-input"
-                type="text"
-                id="betaTelegram"
-                inputmode="text"
+                type="email"
+                id="betaEmail"
+                inputmode="email"
                 autocapitalize="none"
                 autocorrect="off"
                 spellcheck="false"
-                autocomplete="off"
-                placeholder="@username"
+                autocomplete="email"
+                placeholder="tu@esempio.com"
+                data-i18n-attr="placeholder:beta.email.ph"
               />
-              <p class="beta-hint" data-i18n="beta.telegram.hint">Ti aggiungeremo al gruppo riservato con questo.</p>
-              <p class="beta-error" data-error="telegram" data-i18n="beta.telegram.err">Inserisci il tuo username Telegram.</p>
+              <p class="beta-hint" data-i18n="beta.email.hint">Ti scriveremo qui se sei selezionato/a.</p>
+              <p class="beta-error" data-error="email" data-i18n="beta.email.err">Inserisci un'email valida.</p>
             </div>
 
             <!-- Quanti anni hai? -->
@@ -203,16 +204,16 @@
             </div>
             <div id="betaSuccessIos">
               <h2 class="beta-success__t" data-i18n="beta.ok.t">Grazie! 🦩</h2>
-              <p class="beta-success__d" data-i18n="beta.ok.d">
+              <p class="beta-success__d" data-i18n="beta.ok.d.mail">
                 Stiamo selezionando i tester a piccoli gruppi. Se sei dentro, ti
-                scriviamo su Telegram entro pochi giorni.
+                scriviamo via email entro pochi giorni.
               </p>
             </div>
             <div id="betaSuccessWl" hidden>
               <h2 class="beta-success__t" data-i18n="beta.wl.t">Sei in lista 🦩</h2>
-              <p class="beta-success__d" data-i18n="beta.wl.d">
+              <p class="beta-success__d" data-i18n="beta.wl.d.mail">
                 Per ora la beta è solo su iPhone, ma appena arriviamo su Android
-                sarai tra i primi a saperlo. Ti scriviamo su Telegram.
+                sarai tra i primi a saperlo. Ti scriviamo via email.
               </p>
             </div>
           </div>
@@ -230,17 +231,17 @@
       </div>
     </footer>
 
-    <script src="js/i18n.js"></script>
+    <script src="/js/i18n.js"></script>
     <script>
       (function () {
         var ENDPOINT =
-          "https://docs.google.com/forms/d/e/1FAIpQLSfJchtlnaJ9JC-WSQ7JdFcYwMC90l9cGJJYLcOmADBKfhdsFw/formResponse";
+          "https://docs.google.com/forms/d/e/1FAIpQLSe-SAVtvQ7o2InqNNCcxR3uGg85BG4Zx2n8lhiijmUyZey23Q/formResponse";
         var ENTRY = {
           photos: "entry.325565126",
           apps: "entry.1817226168",
           time: "entry.949092732",
           age: "entry.1274027624",
-          telegram: "entry.1948414089",
+          email: "entry.1948414089",
           phone: "entry.810963307",
           model: "entry.1170469488",
           items: "entry.560183156",
@@ -336,21 +337,20 @@
           });
         });
 
-        function normalizeTelegram(v) {
-          v = (v || "").trim().replace(/^@+/, "");
-          return v ? "@" + v : "";
+        function isValidEmail(v) {
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((v || "").trim());
         }
 
         function validate() {
           var ok = true;
           var firstBad = null;
 
-          // username Telegram (prima domanda)
-          var tgInput = document.getElementById("betaTelegram");
-          if (!normalizeTelegram(tgInput.value)) {
-            setError("telegram");
+          // email (prima domanda)
+          var emailInput = document.getElementById("betaEmail");
+          if (!isValidEmail(emailInput.value)) {
+            setError("email");
             ok = false;
-            firstBad = firstBad || tgInput;
+            firstBad = firstBad || emailInput;
           }
 
           // domande sempre obbligatorie, anche nel flusso Android
@@ -405,7 +405,7 @@
           if (!validate()) return;
 
           var params = new URLSearchParams();
-          params.append(ENTRY.telegram, normalizeTelegram(document.getElementById("betaTelegram").value));
+          params.append(ENTRY.email, document.getElementById("betaEmail").value.trim());
           params.append(ENTRY.age, picks.age);
           params.append(ENTRY.photos, picks.photos);
           params.append(ENTRY.apps, picks.apps);
@@ -450,6 +450,6 @@
         renderButton();
       })();
     </script>
-    <script src="js/aurora.js"></script>
+    <script src="/js/aurora.js"></script>
   </body>
 </html>
