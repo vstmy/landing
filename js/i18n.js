@@ -195,7 +195,7 @@
       "wl.alt.link": "Join the beta now →",
       "wl.home": "Home",
 
-      /* ===== CLOSED BETA (beta.html) ===== */
+      /* ===== CLOSED BETA (beta/index.html + beta/telegram.html) ===== */
       "beta.meta.title": "Apply to the closed beta - Vestimy",
       "beta.meta.desc":
         "Apply to Vestimy's closed beta, the app that digitalizes your wardrobe. Limited spots on iPhone: leave your details and we'll message you on Telegram.",
@@ -248,6 +248,18 @@
       "beta.wl.t": "You're on the list 🦩",
       "beta.wl.d":
         "For now the beta is iPhone-only, but the moment we land on Android you'll be among the first to know. We'll message you on Telegram.",
+      "beta.email.label": "Email",
+      "beta.email.hint": "We'll reach out here if you're selected.",
+      "beta.email.err": "Enter a valid email address.",
+      "beta.email.ph": "you@example.com",
+      "beta.lead.mail":
+        "We're opening Vestimy to small groups of testers. Tell us a couple of things about you - if you're selected, we'll email you.",
+      "beta.meta.desc.mail":
+        "Apply to Vestimy's closed beta, the app that digitalizes your wardrobe. Limited spots on iPhone: leave your details and we'll email you.",
+      "beta.ok.d.mail":
+        "We're selecting testers in small groups. If you're in, we'll email you within a few days.",
+      "beta.wl.d.mail":
+        "For now the beta is iPhone-only, but the moment we land on Android you'll be among the first to know. We'll email you.",
 
       "foot.tag":
         "Vestimy digitalizes your wardrobe, helps you compose outfits, and inspires the next look - without buying more.",
@@ -561,7 +573,7 @@
       "wl.alt.link": "Prova subito la beta →",
       "wl.home": "Home",
 
-      /* ===== CLOSED BETA (beta.html) ===== */
+      /* ===== CLOSED BETA (beta/index.html + beta/telegram.html) ===== */
       "beta.meta.title": "Candidati alla closed beta - Vestimy",
       "beta.meta.desc":
         "Candidati alla closed beta di Vestimy, l'app che digitalizza il tuo guardaroba. Posti limitati su iPhone: lascia i tuoi dati e ti scriviamo su Telegram.",
@@ -614,6 +626,18 @@
       "beta.wl.t": "Sei in lista 🦩",
       "beta.wl.d":
         "Per ora la beta è solo su iPhone, ma appena arriviamo su Android sarai tra i primi a saperlo. Ti scriviamo su Telegram.",
+      "beta.email.label": "Email",
+      "beta.email.hint": "Ti scriveremo qui se sei selezionato/a.",
+      "beta.email.err": "Inserisci un'email valida.",
+      "beta.email.ph": "tu@esempio.com",
+      "beta.lead.mail":
+        "Stiamo aprendo Vestimy a piccoli gruppi di tester. Raccontaci due cose su di te: se sei tra i selezionati, ti scriviamo via email.",
+      "beta.meta.desc.mail":
+        "Candidati alla closed beta di Vestimy, l'app che digitalizza il tuo guardaroba. Posti limitati su iPhone: lascia i tuoi dati e ti scriviamo via email.",
+      "beta.ok.d.mail":
+        "Stiamo selezionando i tester a piccoli gruppi. Se sei dentro, ti scriviamo via email entro pochi giorni.",
+      "beta.wl.d.mail":
+        "Per ora la beta è solo su iPhone, ma appena arriviamo su Android sarai tra i primi a saperlo. Ti scriviamo via email.",
 
       "foot.tag":
         "Vestimy digitalizza il tuo guardaroba, ti aiuta a comporre outfit e ti ispira il prossimo look - senza comprare altro.",
